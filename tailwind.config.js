@@ -15,10 +15,11 @@ module.exports = {
         colors: {
           "vertLight" : "#CCC14E", 
           "vertDark" : "#106552", 
-          "blueDark" : "#105E6C", 
+          "blueDark" : "#06869D", 
           "sable" : "#DB976D", 
-          "prune" : "#941B50", 
-          "gris" : "#737373"
+          "prune" : "#A91A5F", 
+          "gris" : "#737373", 
+          "parchemin": "#EFD2AB"
         } 
       },
     },

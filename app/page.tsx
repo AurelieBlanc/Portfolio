@@ -1,12 +1,27 @@
+"use client"; 
+
 import Image from "next/image";
+import useThemeStore from "@/store/themeStore"; // on importe le store global
 
 export default function Home() {
+
+  const { toggleTheme, theme } = useThemeStore(); 
+
+  function switchTheme() {
+    toggleTheme(); 
+    console.log(theme); 
+  }
+
+  const soleilBlanc = "/images/vignettes/VignettesYinYangSoleilBlanc.png"
+  const soleilNoir = "/images/vignettes/VignettesYinYangSoleilNoir.png"
+
+
   return (
     
   <div 
-    className="w-full h-full bg-black">
+    className={`w-full h-[100%]  ${ theme === "light" ? "bg-parchemin" : "bg-black"}`}>
     
-    <div className="w-[70%] mx-auto  flex justify-center flex-wrap gap-8 pt-8 pb-8 bg-black">
+    <div className={`w-[70%] mx-auto  flex justify-center flex-wrap gap-8 pt-8 pb-8 ${ theme === "light" ? "bg-parchemin" : "bg-black"}`}>
      
 
         <div
@@ -64,16 +79,20 @@ export default function Home() {
             />
         </div>
 
+       
         <div
-          className="">
+          className=""
+          onClick={switchTheme}>
 
             <Image
-              src="/images/vignettes/VignettesYinYangSoleilBlanc.png"
+              
+              src={ theme === "light" ? soleilNoir : soleilBlanc }
               alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
               width={400}
               height={400}
             />
         </div>
+       
        
 
     </div>
