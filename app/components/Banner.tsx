@@ -29,12 +29,12 @@ export default function Banner() {
             </div> */}
 
             <h1 
-                className="font-bangers tracking-wide text-5xl w-[300px]  mx-auto text-center mt-20 mb-10">
-                    BIENVENUE sur Un site complètement Zinzin
+                className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[50%]  mx-auto text-center mt-20 mb-10">
+                    BIENVENUE sur Un Portfolio complètement Zinzin
             </h1>
 
             <PiFlyingSaucerDuotone 
-                className=" text-6xl mb-10"/>
+                className=" text-7xl mb-10"/>
 
 
         </div>

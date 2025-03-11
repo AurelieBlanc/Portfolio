@@ -25,7 +25,7 @@ export default function Home() {
      
 
         <div
-          className="">
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
             <Image
               src="/images/vignettes/VignettesFS.png"
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <div
-          className="">
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
             <Image
               src="/images/vignettes/VignettesInterface.png"
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
 
         <div
-          className="">
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
             <Image
               src="/images/vignettes/VignettesCréation.png"
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
 
         <div
-          className="">
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
             <Image
               src="/images/vignettes/VignettesQui.png"
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         <div
-          className="">
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
             <Image
               src="/images/vignettes/VignettesContact.png"
@@ -81,7 +81,7 @@ export default function Home() {
 
        
         <div
-          className=""
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}
           onClick={switchTheme}>
 
             <Image

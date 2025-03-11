@@ -2,27 +2,26 @@ import { create } from "zustand";
 
 interface ThemeStore {
     theme: "light" | "dark", 
-    messagesBar: string, 
+    colorBar: string, 
 
     toggleTheme: () => void, 
-    toggleMessagesBar: () => void, 
+    toggleColorBar: (newColor: string) => void, 
 }
 
 const useThemeStore = create <ThemeStore> ((set) => ({
-    theme : "light", // valeur initiale 
-    messagesBar: "vertLight", 
+    theme : "dark", // valeur initiale 
+    colorBar: "bg-vertLight", 
 
     toggleTheme: () => 
         set((state) => ({
             theme: state.theme === "light" ? "dark": "light", 
         })), 
 
-    toggleMessagesBar: () => 
-    {
-        set((state) => {
-            
-        })
-    }
+    toggleColorBar: (newColor: string) =>
+        set (() => ({
+            colorBar: newColor
+        }))
+    
 })); 
 
 export default useThemeStore 
