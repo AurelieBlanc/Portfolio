@@ -8,7 +8,8 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          bangers: ["Bangers", "system-ui"]
+          bangers: ["Bangers", "system-ui"], 
+          lilita : ["Lilita One", "sans-serif"]
         },
         colors: {
           "vertLight" : "#CCC14E", 

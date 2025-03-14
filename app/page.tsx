@@ -41,59 +41,68 @@ export default function Home() {
         <div
           className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
-            <Image
-              src="/images/vignettes/VignettesInterface.png"
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
+            <Link href="interfaces">
+              <Image
+                src="/images/vignettes/VignettesInterface.png"
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+            </Link>
+        </div>
+
+        <div
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
+            <Link
+              href="creation">
+              <Image
+                src="/images/vignettes/VignettesCréation.png"
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+            </Link>
+        </div>
+
+        <div
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
+            
+            <Link href="presentation">
+              <Image
+                src="/images/vignettes/VignettesQui.png"
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+            </Link>
         </div>
 
         <div
           className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
 
-            <Image
-              src="/images/vignettes/VignettesCréation.png"
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
-        </div>
-
-        <div
-          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
-
-            <Image
-              src="/images/vignettes/VignettesQui.png"
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
-        </div>
-
-        <div
-          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
-
-            <Image
-              src="/images/vignettes/VignettesContact.png"
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
+            <Link href="contact">
+              <Image
+                src="/images/vignettes/VignettesContact.png"
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+            </Link>
         </div>
 
        
         <div
           className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}
           onClick={switchTheme}>
-
-            <Image
+            
+              <Image
               
-              src={ theme === "light" ? soleilNoir : soleilBlanc }
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
+                src={ theme === "light" ? soleilNoir : soleilBlanc }
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+              
         </div>
        
        

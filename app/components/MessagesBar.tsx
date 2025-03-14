@@ -16,7 +16,7 @@ export default function MessagesBar () {
         { message: "Je te regarde toi, ô humain, t'agiter en vain ! ", color: "bg-blueDark"}, 
         { message: "Tu cherches la fight ?!", color: "bg-sable"}, 
         { message: "Arrete de m'irriter le clic !! ", color: "bg-prune"}, 
-        { message: "Si tu embauches ma créatrice, tu seras bénie pendant 20 générations !!! ", color: "bg-gris"}, 
+        { message: "Si tu embauches ma créatrice, tu seras bénie pour 20 générations !!! ", color: "bg-gris"}, 
     ]);
 
     useEffect(() => {
