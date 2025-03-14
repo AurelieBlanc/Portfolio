@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import useThemeStore from "@/store/themeStore"; // on importe le store global
+import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
 
 export default function Home() {
 
@@ -25,14 +26,16 @@ export default function Home() {
      
 
         <div
-          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}>
-
-            <Image
-              src="/images/vignettes/VignettesFS.png"
-              alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
-              width={400}
-              height={400}
-            />
+          className={theme === "light" ? "border-4 border-black" : "border-4 border-white"}
+          >
+            <Link href="full-stack">
+              <Image
+                src="/images/vignettes/VignettesFS.png"
+                alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
+                width={400}
+                height={400}
+              />
+            </Link>
         </div>
 
         <div

@@ -8,8 +8,6 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          nothing: ["Nothing You Could Do", "cursive"], 
-          square: ["Square Peg", "cursive"], 
           bangers: ["Bangers", "system-ui"]
         },
         colors: {
