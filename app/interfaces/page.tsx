@@ -4,9 +4,6 @@ import useThemeStore from "@/store/themeStore"; // on importe le store global
 import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
-
-
-
 import Link from "next/link";
 
 export default function InterfacePage () {
@@ -41,27 +38,26 @@ export default function InterfacePage () {
                 className="w-[80%] mx-auto">
 
                 <h3
-                    className="text-3xl font-bangers ">
-                     <PiFlyingSaucerDuotone 
-                        className=" inline-block mr-3"/>
-
-                       Mettre Formulaire contact 
-                </h3>
-
-                <h3
                     className="text-3xl mt-10 font-bangers">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
 
-                    BLABLA : 
+                    Site Vitrine développé pour une naturopathe, "L'Instant Angélique" : 
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur vel quo eius dolores debitis saepe, cumque illo odit qui sapiente sed natus nam repellendus maiores vitae placeat accusantium dolorem!
-                      
-                       Odit similique harum rerum aspernatur vitae, incidunt consequuntur omnis ipsa dolorum quasi ad distinctio eligendi, ab repellat animi dolore quaerat ipsum delectus minus ipsam,bus. 
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic underline">
+                    <Link href="https://angelique-naturopathe.vercel.app/">
+                        L'instant Angélique
+                    </Link>
                 </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-8">
+                    Site développé en next.js, adapatable autant sur format mobile que sur format laptop.  
+                </p>
+
+                
                 
             </div>
 

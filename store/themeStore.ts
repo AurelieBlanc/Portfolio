@@ -9,7 +9,7 @@ interface ThemeStore {
 }
 
 const useThemeStore = create <ThemeStore> ((set) => ({
-    theme : "dark", // valeur initiale 
+    theme : "light", // valeur initiale 
     colorBar: "bg-vertLight", 
 
     toggleTheme: () => 
