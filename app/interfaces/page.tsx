@@ -4,6 +4,7 @@ import useThemeStore from "@/store/themeStore"; // on importe le store global
 import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
+import { FaInstagram } from "react-icons/fa"; // import icone insta
 import Link from "next/link";
 
 export default function InterfacePage () {
@@ -46,8 +47,12 @@ export default function InterfacePage () {
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic underline">
-                    <Link href="https://angelique-naturopathe.vercel.app/">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    
+                    Accès : 
+                    <Link 
+                        className="underline ml-2"
+                        href="https://angelique-naturopathe.vercel.app/">
                         L'instant Angélique
                     </Link>
                 </p>
@@ -57,6 +62,15 @@ export default function InterfacePage () {
                     Site développé en next.js, adapatable autant sur format mobile que sur format laptop.  
                 </p>
 
+                  <p
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                    <ImEye 
+                        className="inline-block text-3xl pr-2 "/>
+                            D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
+                            <FaInstagram
+                                className="ml-4 inline-block" /> 
+                                    
+                   </p>
                 
                 
             </div>

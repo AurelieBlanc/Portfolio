@@ -5,7 +5,7 @@ import useThemeStore from "@/store/themeStore"; // on importe le store global
 import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
-
+import { FaInstagram } from "react-icons/fa"; // import icone insta 
 
 
 import Link from "next/link";
@@ -48,11 +48,19 @@ export default function CreationPage () {
 
 
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-10">
+                    className="text-3xl mt-10 font-bangers mb-5">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les Logos :
                 </h3>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-7">
+                     <ImEye 
+                            className="inline-block text-3xl pr-2 "/>
+                       Quelques logos réalisés. 
+                      
+                </p>
 
                 <div
                     className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto mb-10">
@@ -124,22 +132,19 @@ export default function CreationPage () {
                 </div>
 
 
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur vel quo eius dolores debitis saepe, cumque illo odit qui sapiente sed natus nam repellendus maiores vitae placeat accusantium dolorem!
-                      
-                </p>
-
+               
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-10">
+                    className="text-3xl mt-10 font-bangers mb-5">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les Vignettes :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-10">
-                       100% créées par Lili : 
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-5">
+                        <ImEye 
+                            className="inline-block text-3xl pr-2 "/>
+                        100% créées par Lili : 
                       
                 </p>
 
@@ -215,14 +220,14 @@ export default function CreationPage () {
                 </div>
 
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-10">
+                    className="text-3xl mt-10 font-bangers mb-5">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les images générées par IA pour différents projets :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-10">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-5">
                          <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             WeekyPlanner : 
@@ -273,6 +278,16 @@ export default function CreationPage () {
                         </div>
 
                 </div>
+
+                <p
+                  className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                    <ImEye 
+                        className="inline-block text-3xl pr-2 "/>
+                        D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
+                        <FaInstagram
+                            className="ml-4 inline-block" /> 
+                                                   
+                </p>
 
                 
                 

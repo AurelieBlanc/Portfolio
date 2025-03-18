@@ -5,6 +5,7 @@ import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe 
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
 import { MdSecurity } from "react-icons/md"; // icone sécurité
+import { FaInstagram } from "react-icons/fa"; // icone instagram
 
 import Image from "next/image"; 
 
@@ -59,8 +60,11 @@ export default function FullStackPage () {
                 </h3>
 
                 <p
-                    className="underline mt-10 ml-5 md:ml-11 text-xl font-lilita italic">
-                        <Link href="https://lvdp-rencontres.vercel.app/">
+                    className="mt-10 ml-5 md:ml-11 text-xl font-lilita italic">
+                        Accès : 
+                        <Link 
+                            className="underline ml-2"
+                            href="https://lvdp-rencontres.vercel.app/">
                             lvdp-rencontres
                         </Link>
                     
@@ -100,21 +104,21 @@ export default function FullStackPage () {
                 </ul>
 
                 <h4
-                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers"> 
+                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers pb-4"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
                           Fonctionnalités : 
                 </h4>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic ">
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
                         <ImEye 
-                            className="inline-block text-3xl pr-2 "/>
-                            Chaque personne ayant accès au site (via le lien partagé) peut se proposer comme contact via un formulaire :
+                            className="inline-block text-2xl pr-2 "/>
+                            Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique).
                         
                         <div className="flex justify-center mt-4">
                            <Image
-                             src="/images/imprEcran/LVDP/formContact.png"
+                             src="/images/imprEcran/LVDP/tableauContacts.png"
                              alt="image du formulaire pour les contacts qui se portent volontaires"
                              width={350}
                              height={350}
@@ -125,19 +129,27 @@ export default function FullStackPage () {
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic ">
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
                         <MdSecurity 
                             className="inline-block pr-2 text-4xl text-red-500"/>
-                        Le formulaire est protégé par un schéma de validation  de données YUP coté front. 
-                        Si le schéma de validation  de données est validé, un mail sera envoyé à l'admin via Nodemailer. 
-                             
+                        Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
+
+                         <div className="flex justify-center mt-4">
+                           <Image
+                             src="/images/imprEcran/LVDP/formContact.png"
+                             alt="image du formulaire pour les contacts qui se portent volontaires"
+                             width={200}
+                             height={200}
+                           
+                           /> 
+                        </div>       
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic ">
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
                         <ImEye 
                             className="inline-block text-3xl pr-2 "/>
-                            C'est à l'admin de creer les contacts via une interface sécurisée auquelle il aura accès apères. 
+                            Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe.
                         
                         <div className="flex justify-center mt-4">
                            <Image
@@ -151,7 +163,41 @@ export default function FullStackPage () {
                     
                 </p>
 
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
+                        <MdSecurity 
+                            className="inline-block pr-2 text-4xl text-red-500"/>
+                            Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur).
+                        
+                        <div className="flex justify-center mt-4">
+                           <Image
+                             src="/images/imprEcran/LVDP/tableauAdmin.png"
+                             alt="image du formulaire pour les contacts qui se portent volontaires"
+                             width={350}
+                             height={350}
+                           
+                           /> 
+                        </div>
+                    
+                </p>
 
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                        <MdSecurity 
+                            className="inline-block pr-2 text-4xl text-red-500"/>
+                            Toutes les operations CRUD sont sécurisées par la verificatio systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
+                    
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                         <ImEye 
+                            className="inline-block text-3xl pr-2 "/>
+                            D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
+                            <FaInstagram
+                                className="ml-4 inline-block" /> 
+                    
+                </p>
 
             </div>
             

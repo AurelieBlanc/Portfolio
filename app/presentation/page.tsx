@@ -44,25 +44,205 @@ export default function PresentationPage () {
                     className="text-3xl font-bangers ">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-
-                       Mettre Mes compétences 
+                        Présentation 
                 </h3>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                       Salut moi c'est Aurélie, et voici mon histoire !
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                       C'est à la suite de la découverte tardive (ou pas!!! Mieux vaut tard que jamais comme on dit !!) de mon syndrome d'Asperger, que j'ai décidé de me reconvertir pour enfin coller ma vie pro à ma neuroatypie.
+                      
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                        C'est Ainsi que je suis tombée dans le développement et que non seulement j'aime coder mais créer aussi !
+                </p>
+
+
 
                 <h3
                     className="text-3xl mt-10 font-bangers">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
 
-                    BLABLA : 
+                   MES COMPETENCES : 
                 </h3>
 
                 <p
                     className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur vel quo eius dolores debitis saepe, cumque illo odit qui sapiente sed natus nam repellendus maiores vitae placeat accusantium dolorem!
-                      
-                       Odit similique harum rerum aspernatur vitae, incidunt consequuntur omnis ipsa dolorum quasi ad distinctio eligendi, ab repellat animi dolore quaerat ipsum delectus minus ipsam,bus. 
+                      Autant capable de vous coder un site vitrine qu'un site full-stack, autant capable de vous inventer des thèmes ou des univers, je vous mets les differentes technos que je maitrise (MAIS , étant autodidacte je suis bien évidemment capable d'en apprendre d'autres et partante !!) : 
+                </p>
+
+                <h4
+                    className="text-2xl mt-10 font-bangers text-center">
+                      <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+
+                   FRONT-END : 
+                </h4>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic text-center">
+                      <ul>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 NEXT.JS
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 React.js
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Redux
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Javascript
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Typescript
+                        </li>
+                      </ul>
+                </p>
+
+                <h4
+                    className="text-2xl mt-10 font-bangers text-center">
+                      <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+
+                   BACK-END : 
+                </h4>
+
+                <p
+                    className="text-center ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                      <ul>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 NEXT.JS
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Node.js
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 PostgreSQL
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Sequelize
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Prisma
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Express.js
+                        </li>
+                      </ul>
+                </p>
+
+                <h4
+                    className="text-2xl mt-10 font-bangers text-center">
+                      <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+
+                   Intégration Web : 
+                </h4>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic text-center">
+                      <ul>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 HTML5
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 CSS
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Tailwind
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Affinités pour créer 
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Notion UI
+                        </li>
+                        
+                      </ul>
                 </p>
                 
+
+                <h4
+                    className="text-2xl mt-10 font-bangers text-center">
+                      <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+
+                   Gestion de Projet 
+                </h4>
+
+                <p
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-10 text-center">
+                      <ul>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 GitHub
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Whimsical
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Figma
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                 Trello 
+                        </li>
+                        <li>
+                            <ImEye 
+                                className="inline-block text-3xl pr-2 "/>
+                                Canva
+                        </li>
+                        
+                      </ul>
+                </p>
+                
+
             </div>
 
         </div>
