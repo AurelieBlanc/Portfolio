@@ -5,7 +5,7 @@ import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe 
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ export default function PresentationPage () {
 
     return (
         <div
-            className={`h-full  ${ theme === "light" ? light : dark}`}>
+            className={`h-full  ${ themeActu === "light" ? light : dark}`}>
 
             <p
                 className="flex justify-end p-5 text-xl underline font-bangers">
@@ -86,11 +86,52 @@ export default function PresentationPage () {
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-10">
                       Autant capable de vous coder un site vitrine qu'un site full-stack, autant capable de vous inventer des thèmes ou des univers, je vous mets les differentes technos que je maitrise (MAIS , étant autodidacte je suis bien évidemment capable d'en apprendre d'autres et partante !!) : 
                 </p>
 
-                <h4
+                <div
+                    className="flex flex-wrap gap-4 justify-center pb-10">
+                        <div
+                            className="">
+                                <Image
+                                    src="/images/compétences/frontend.png"
+                                    alt="vignette avec toutes les compétences front-end"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="">
+                                <Image
+                                    src="/images/compétences/backend.png"
+                                    alt="vignette avec toutes les compétences front-end"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="">
+                                <Image
+                                    src="/images/compétences/integration.png"
+                                    alt="vignette avec toutes les compétences front-end"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="">
+                                <Image
+                                    src="/images/compétences/gestionprojet.png"
+                                    alt="vignette avec toutes les compétences front-end"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                </div>
+
+                {/* <h4
                     className="text-2xl mt-10 font-bangers text-center">
                       <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
@@ -252,7 +293,7 @@ export default function PresentationPage () {
                         </li>
                         
                       </ul>
-                </p>
+                </p> */}
                 
 
             </div>
