@@ -6,6 +6,7 @@ import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour E
 import { ImEye } from "react-icons/im"; // import eye
 import { MdSecurity } from "react-icons/md"; // icone sécurité
 import { FaInstagram } from "react-icons/fa"; // icone instagram
+import { useEffect, useState } from "react"; 
 
 import Image from "next/image"; 
 
@@ -16,12 +17,23 @@ export default function FullStackPage () {
 
     const { theme } = useThemeStore(); 
 
+    const [ themeActu , setThemeActu ] = useState<string>(); 
+
+    useEffect (() => {
+        const valueLocalStorage = localStorage.getItem("theme"); 
+        console.log("valueLocalStorage : ", valueLocalStorage); 
+    
+        if(valueLocalStorage) {
+        setThemeActu(valueLocalStorage);  
+        }
+      }, [])
+
     const light = "bg-parchemin text-black"
     const dark = "bg-black text-white"
 
     return (
         <div
-            className={`h-full  ${ theme === "light" ? light : dark}`}>
+            className={`h-full  ${ themeActu === "light" ? light : dark}`}>
 
             <p
                 className="flex justify-end p-5 text-xl underline font-bangers">

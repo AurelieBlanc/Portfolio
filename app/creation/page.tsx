@@ -6,7 +6,7 @@ import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe 
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye
 import { FaInstagram } from "react-icons/fa"; // import icone insta 
-
+import { useEffect, useState } from "react"; 
 
 import Link from "next/link";
 
@@ -14,12 +14,23 @@ export default function CreationPage () {
 
     const { theme } = useThemeStore(); 
 
+    const [ themeActu , setThemeActu ] = useState<string>(); 
+
+    useEffect (() => {
+        const valueLocalStorage = localStorage.getItem("theme"); 
+        console.log("valueLocalStorage : ", valueLocalStorage); 
+    
+        if(valueLocalStorage) {
+        setThemeActu(valueLocalStorage);  
+        }
+      }, [])
+
     const light = "bg-parchemin text-black"
     const dark = "bg-black text-white"
 
     return (
         <div
-            className={`h-full  ${ theme === "light" ? light : dark}`}>
+            className={`h-full  ${ themeActu === "light" ? light : dark}`}>
 
             <p
                 className="flex justify-end p-5 text-xl underline font-bangers">

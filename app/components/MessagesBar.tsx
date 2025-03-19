@@ -7,6 +7,22 @@ export default function MessagesBar () {
 
     const { theme, toggleColorBar, colorBar } = useThemeStore(); 
 
+    const [ themeActu , setThemeActu ] = useState<string>();
+    
+    useEffect (() => {
+        const valueLocalStorage = localStorage.getItem("theme"); 
+        console.log("valueLocalStorage : ", valueLocalStorage); 
+    
+        if(valueLocalStorage) {
+        setThemeActu(valueLocalStorage);  
+        }
+      }, [])
+    
+      useEffect(() => {
+        setThemeActu(theme)
+      }, [theme])
+    
+
     const couleurLight = " text-black border-black"; 
     const couleurDark = "text-white border-white "; 
 
@@ -60,7 +76,7 @@ export default function MessagesBar () {
 
     return (
         <div    
-            className={` ${ theme === "light" ? couleurLight : couleurDark } w-full h-[120px] md:h-[60px]  ${colorBar} mx-auto border-t-4 border-b-4 rounded-sm flex justify-center items-center font-bangers font-medium text-2xl tracking-wide text-center pl-5 pr-5`}
+            className={` ${ themeActu === "light" ? couleurLight : couleurDark } w-full h-[120px] md:h-[60px]  ${colorBar} mx-auto border-t-4 border-b-4 rounded-sm flex justify-center items-center font-bangers font-medium text-2xl tracking-wide text-center pl-5 pr-5`}
             onClick={changeMessage}>
 
                 {messageDisplay}
