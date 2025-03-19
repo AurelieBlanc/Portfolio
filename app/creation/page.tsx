@@ -172,7 +172,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/vignettes/VignettesCréation.png"    
+                                    src="/images/vignettes/VignettesCreation.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -280,7 +280,7 @@ export default function CreationPage () {
                 </div>
 
                 <p
-                  className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                  className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
                     <ImEye 
                         className="inline-block text-3xl pr-2 "/>
                         D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  

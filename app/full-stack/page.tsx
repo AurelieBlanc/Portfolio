@@ -182,15 +182,15 @@ export default function FullStackPage () {
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
                         <MdSecurity 
                             className="inline-block pr-2 text-4xl text-red-500"/>
-                            Toutes les operations CRUD sont sécurisées par la verificatio systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
+                            Toutes les operations CRUD sont sécurisées par la verification systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
                     
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic text-black pb-10">
+                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
                          <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
