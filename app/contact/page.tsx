@@ -6,13 +6,10 @@ import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour E
 import { ImEye } from "react-icons/im"; // import eye <ImEye />
 import { GiRotaryPhone } from "react-icons/gi"; // import icone tel retro <GiRotaryPhone />
 import { AiTwotoneMail } from "react-icons/ai"; // import icone mail  <AiTwotoneMail />
-import Image from "next/image";
-
- 
-import { useEffect, useState } from "react"; 
-
-
-import Link from "next/link";
+import Image from "next/image"; // import du composant Image
+import { useEffect, useState, ChangeEvent, FormEvent } from "react"; // import des hooks React
+import Link from "next/link"; // import de Link
+import * as Yup from "yup"; 
 
 export default function ContactPage () {
 
@@ -24,7 +21,6 @@ export default function ContactPage () {
 
     useEffect (() => {
         const valueLocalStorage = localStorage.getItem("theme"); 
-        console.log("valueLocalStorage : ", valueLocalStorage); 
     
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
@@ -39,28 +35,96 @@ export default function ContactPage () {
 
 
 
+
+
     // Code pour la GESTION DE l'AFFICHAGE DE L'EMAIL OU DU NUMERO :--------------------------------------------------//
 
     const [ hidden, setHidden ] = useState<boolean>(true); 
 
     function switchBooleanHidden() {
         setHidden(prevState => !prevState); 
-        console.log(hidden, hidden, hidden)
     }
 
     //----------------------------------------------------------------------------------------------------------------//
 
 
 
+
+
+
     // Code pour la GESTION et soumission du FORMULAIRE DE CONTACT  : ------------------------------------------------//
 
-
-
-    function handleInput () {
-
+    interface Contact {
+        nom: string, 
+        email: string, 
+        telephone: string, 
+        message: string 
     }
+
+    const [ contactForm, setContactForm ] =  useState<Contact>({
+        nom: "", 
+        email: "", 
+        telephone: "", 
+        message: ""
+    })
+
+    const contactFormSchema = Yup.object().shape({
+        nom: Yup.string()
+        .matches(/^[a-zA-Z\s\-]+$/, 'Le nom peut contenir des lettres, des espaces et des traits d\'union uniquement') 
+        .required('Nom obligatoire'),
+
+      email: Yup.string()
+        .email('Email invalide')
+        .required('Email obligatoire'),
     
-    function submitForm() {
+      telephone: Yup.string()
+        .optional(), // pas obligatoire, format string (sans validation de format spécifique)
+    
+      message: Yup.string()
+        .required('Message obligatoire')
+        .max(500, 'Le message ne peut pas dépasser 500 caractères')
+        .matches(/^[\s\S]*$/, 'Le message peut contenir toutes les lettres et caractères spéciaux.') // Accepte tout type de caractères
+    })
+
+
+
+
+    function handleInput (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) { // pour gerer les changements d'etats du state contactForm
+        
+        const { name, value } = event.target; 
+
+        setContactForm ({
+            ...contactForm, 
+            [name]: value, 
+        }) 
+    }
+
+    async function submitForm(event: FormEvent <HTMLFormElement>) { // pour gerer la soumission du formulaire 
+        event?.preventDefault(); 
+
+        try { // on va tout d'abord valider coté front avec YUP si les données soumises sont correctes
+            
+            await contactFormSchema.validate (contactForm, { abortEarly: false }); // abortEarly pour collecter toutes les erreurs de validation meme si l'erreur se trouve sur le premie champ (par defaut Yup s'arrete des qu'il rencontre une erreur, donc là avec false, on recup toutes les erreurs)
+            console.log("formulaire soumis avec succès", contactForm); 
+
+        } catch (error) {
+            if (error instanceof Yup.ValidationError) {// on verifie si l'erreur capturée dans le bloc catch est une erreur de validation YUP
+                const errorMessages = error.inner.map((err) => err.message).join(",\n"); //error.inner est un tableau avec les messages des erreurs, donc on boucle dessus
+                alert(errorMessages); 
+            }
+
+        }
+
+
+
+        try {
+
+            // faire appel API ici pour le back 
+
+        } catch(error) {
+
+        }
+
 
     }
 
@@ -140,7 +204,7 @@ export default function ContactPage () {
                 </div>
 
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-10 font-bangers mb-10">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
 
@@ -159,7 +223,10 @@ export default function ContactPage () {
                                     Votre nom, prénom : 
                             </label>
                             <input 
-                                className="rounded-md mb-5"
+                                className="rounded-md mb-5 text-black"
+                                value={contactForm.nom}
+                                name="nom"
+                                onChange={handleInput}
                                 required/>
                            
 
@@ -169,7 +236,10 @@ export default function ContactPage () {
                                     Votre Email : 
                             </label>
                             <input 
-                                className="rounded-md mb-5"
+                                className="rounded-md mb-5 text-black"
+                                value={contactForm.email}
+                                name="email"
+                                onChange={handleInput}
                                 required/>
 
                                  {/* Champ Téléphone*/}
@@ -178,7 +248,10 @@ export default function ContactPage () {
                                     Votre Téléphone : 
                             </label>
                             <input 
-                                className="rounded-md mb-5"/>
+                                className="rounded-md mb-5 text-black"
+                                value={contactForm.telephone}
+                                name="telephone"
+                                onChange={handleInput}/>
 
                                  {/* Champ Message*/}
                             <label
@@ -186,7 +259,12 @@ export default function ContactPage () {
                                     Votre demande : 
                             </label>
                             <textarea
-                                className="rounded-md mb-5"/>
+                                className="rounded-md mb-5 text-black"
+                                value={contactForm.message}
+                                name="message"
+                                onChange={handleInput}
+                                maxLength={500}
+                                required/>
                            
                            
                             <button
