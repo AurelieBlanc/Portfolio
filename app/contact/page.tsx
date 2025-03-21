@@ -9,7 +9,7 @@ import { AiTwotoneMail } from "react-icons/ai"; // import icone mail  <AiTwotone
 import Image from "next/image"; // import du composant Image
 import { useEffect, useState, ChangeEvent, FormEvent } from "react"; // import des hooks React
 import Link from "next/link"; // import de Link
-import * as Yup from "yup"; 
+import * as Yup from "yup"; // import du schéma de validation de données YUP
 
 export default function ContactPage () {
 
@@ -70,7 +70,7 @@ export default function ContactPage () {
 
     const contactFormSchema = Yup.object().shape({
         nom: Yup.string()
-        .matches(/^[a-zA-Z\s\-]+$/, 'Le nom peut contenir des lettres, des espaces et des traits d\'union uniquement') 
+        .matches(/^[a-zA-ZÀ-ÖØ-öø-ÿ\s\-]+$/, 'Le nom peut contenir des lettres, des espaces et des traits d\'union uniquement') 
         .required('Nom obligatoire'),
 
       email: Yup.string()
@@ -112,17 +112,21 @@ export default function ContactPage () {
                 const errorMessages = error.inner.map((err) => err.message).join(",\n"); //error.inner est un tableau avec les messages des erreurs, donc on boucle dessus
                 alert(errorMessages); 
             }
-
         }
-
-
 
         try {
 
-            // faire appel API ici pour le back 
+            const response = await fetch ("/api/contact/email", {
+                method: "POST", 
+                headers: { "Content-Type" : "application/json"}, 
+                body: JSON.stringify(contactForm), 
+            })
+            
+            const data = await response.json(); 
+            console.log("reponse du back : ", data.message)
 
         } catch(error) {
-
+            console.error("erreur lors de l'envoi du formulaire au back : ", error)
         }
 
 
