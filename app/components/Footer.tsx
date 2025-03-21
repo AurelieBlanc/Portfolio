@@ -3,9 +3,12 @@
 import { FaInstagram } from "react-icons/fa";
 import useThemeStore from "@/store/themeStore";
 import { useEffect, useState } from "react"; 
+import Link from "next/link"; // import pour les liens
 
 
 export default function Footer() {
+
+
 
     const { theme, colorBar } = useThemeStore(); 
 
@@ -34,8 +37,11 @@ export default function Footer() {
             <p>
                 Je te partage mon reseau Social Trop class NaNaNanère :
                 <span>
-                    <FaInstagram
-                    className="ml-4 inline-block" />
+                    <Link
+                        href="https://www.instagram.com/bewildbeweirdbewhite/">
+                        <FaInstagram
+                            className="ml-4 inline-block" />
+                    </Link>
                 </span>
             </p>
 

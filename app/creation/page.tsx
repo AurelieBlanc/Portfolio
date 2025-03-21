@@ -79,7 +79,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWfondNoir.png"    
+                                    src="/images/logos/png/beWild2Triangles.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -89,7 +89,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildfondBlanc.png"    
+                                    src="/images/logos/png/beWildfondNoir.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -99,7 +99,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWild2triangles.png"    
+                                    src="/images/logos/png/beWildLaurier.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -109,7 +109,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildtrianglesFleches.png"    
+                                    src="/images/logos/png/bwClass.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -119,7 +119,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/BlackWhite.png"    
+                                    src="/images/logos/png/beWildFondBlanc.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -129,7 +129,37 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/BWgreen.png"    
+                                    src="/images/logos/png/bwDiff.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/logos/png/beWildTrianglesFleches.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/logos/png/bwGreen.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/logos/png/beWildFondBlancOcre.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -295,9 +325,11 @@ export default function CreationPage () {
                     <ImEye 
                         className="inline-block text-3xl pr-2 "/>
                         D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
-                        <FaInstagram
-                            className="ml-4 inline-block" /> 
-                                                   
+                        <Link
+                                href="https://www.instagram.com/bewildbeweirdbewhite/">
+                                <FaInstagram
+                                    className="ml-4 inline-block" /> 
+                        </Link>
                 </p>
 
                 

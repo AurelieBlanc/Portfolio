@@ -80,8 +80,11 @@ export default function InterfacePage () {
                     <ImEye 
                         className="inline-block text-3xl pr-2 "/>
                             D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
-                            <FaInstagram
-                                className="ml-4 inline-block" /> 
+                            <Link
+                                href="https://www.instagram.com/bewildbeweirdbewhite/">
+                                <FaInstagram
+                                    className="ml-4 inline-block" /> 
+                            </Link>
                                     
                    </p>
                 
