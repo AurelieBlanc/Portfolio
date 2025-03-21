@@ -1,6 +1,6 @@
-"use client"
+"use client" // composant éxécuté uniquement coté client
 
-import useThemeStore from "@/store/themeStore"; // on importe le store global
+// import useThemeStore from "@/store/themeStore"; // on importe le store global
 import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
 import { ImEye } from "react-icons/im"; // import eye <ImEye />
@@ -14,8 +14,6 @@ import * as Yup from "yup"; // import du schéma de validation de données YUP
 export default function ContactPage () {
 
     // Code pour le THEME avec gestion en LOCAL STORAGE :-------------------------------------------------------------// 
-
-    const { theme } = useThemeStore(); 
 
     const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -39,9 +37,9 @@ export default function ContactPage () {
 
     // Code pour la GESTION DE l'AFFICHAGE DE L'EMAIL OU DU NUMERO :--------------------------------------------------//
 
-    const [ hidden, setHidden ] = useState<boolean>(true); 
+    const [ hidden, setHidden ] = useState<boolean>(true);  // on cree un state qui gere un boolean 
 
-    function switchBooleanHidden() {
+    function switchBooleanHidden() {  // on fait switcher ce boolean pour afficher le numero et le mail
         setHidden(prevState => !prevState); 
     }
 
@@ -52,23 +50,23 @@ export default function ContactPage () {
 
 
 
-    // Code pour la GESTION et soumission du FORMULAIRE DE CONTACT  : ------------------------------------------------//
+    // Code pour la GESTION et soumission du FORMULAIRE DE CONTACT  : ----------------------------------------------------//
 
-    interface Contact {
+    interface Contact {   // on type le state contactForm
         nom: string, 
         email: string, 
         telephone: string, 
         message: string 
     }
 
-    const [ contactForm, setContactForm ] =  useState<Contact>({
-        nom: "", 
+    const [ contactForm, setContactForm ] =  useState<Contact>({   // on crée le state local pour le state contactForm
+        nom: "",   
         email: "", 
         telephone: "", 
         message: ""
     })
 
-    const contactFormSchema = Yup.object().shape({
+    const contactFormSchema = Yup.object().shape({  // on cree un schéma de validation de données YUP pour valider, ou pas, ce qui sera envoyé via l'appel API
         nom: Yup.string()
         .matches(/^[a-zA-ZÀ-ÖØ-öø-ÿ\s\-]+$/, 'Le nom peut contenir des lettres, des espaces et des traits d\'union uniquement') 
         .required('Nom obligatoire'),
@@ -87,11 +85,9 @@ export default function ContactPage () {
     })
 
 
-
-
-    function handleInput (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) { // pour gerer les changements d'etats du state contactForm
+    function handleInput (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) { // fonction pour gerer les changements d'etats du state contactForm
         
-        const { name, value } = event.target; 
+        const { name, value } = event.target;  
 
         setContactForm ({
             ...contactForm, 
@@ -99,7 +95,7 @@ export default function ContactPage () {
         }) 
     }
 
-    async function submitForm(event: FormEvent <HTMLFormElement>) { // pour gerer la soumission du formulaire 
+    async function submitForm(event: FormEvent <HTMLFormElement>) { // fonction pour gérer la soumission du formulaire 
         event?.preventDefault(); 
 
         try { // on va tout d'abord valider coté front avec YUP si les données soumises sont correctes
@@ -108,32 +104,28 @@ export default function ContactPage () {
             console.log("formulaire soumis avec succès", contactForm); 
 
         } catch (error) {
-            if (error instanceof Yup.ValidationError) {// on verifie si l'erreur capturée dans le bloc catch est une erreur de validation YUP
+            if (error instanceof Yup.ValidationError) {// on verifie si l'erreur capturée dans le bloc catch est une erreur de validation YUP et si oui, on éxécute le code ci-apres : 
                 const errorMessages = error.inner.map((err) => err.message).join(",\n"); //error.inner est un tableau avec les messages des erreurs, donc on boucle dessus
-                alert(errorMessages); 
+                alert(errorMessages);// on affiche les erreurs à l'user grace à la fonction alert
             }
         }
 
-        try {
-
-            const response = await fetch ("/api/contact/email", {
+        try { 
+            const response = await fetch ("/api/contact/email", { // maintenant que les données sont validées car correctes, on fait un appel API au back et on envoie en body le contactForm
                 method: "POST", 
                 headers: { "Content-Type" : "application/json"}, 
                 body: JSON.stringify(contactForm), 
             })
             
-            const data = await response.json(); 
-            console.log("reponse du back : ", data.message)
+            const data = await response.json(); // on recupère la réponse du back dans la constante data
+            console.log("reponse du back : ", data.message) // ... et on affiche le message de data
 
         } catch(error) {
-            console.error("erreur lors de l'envoi du formulaire au back : ", error)
+            console.error("erreur lors de l'envoi du formulaire au back : ", error) // si erreur on exécutera ce code 
         }
-
-
     }
 
-
-    //------------------------------------------------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------------------------------------------------//
 
     return (
         <div
@@ -163,8 +155,7 @@ export default function ContactPage () {
                     className="text-3xl font-bangers ">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-
-                       Interessé(e) pour rentrer en contact ? Voici mes coordonnées :
+                        Interessé(e) pour rentrer en contact ? Voici mes coordonnées :
                 </h3>
 
                 <div
@@ -176,12 +167,10 @@ export default function ContactPage () {
                                      <GiRotaryPhone 
                                         className="inline-block pr-2 text-3xl"/>
                                         
-                                      
                                         <ImEye 
                                             className="inline-block text-4xl pr-2"
                                             onClick={switchBooleanHidden}/> 
                                             Clique sur l'oeil pour voir le numéro.
-
 
                                         <span
                                             className={`block pt-2 ${ hidden === false ? "": "hidden"}`}>

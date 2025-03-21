@@ -1,9 +1,9 @@
-"use client"; 
+"use client"; // composant éxécuté uniquement coté client
 
-import Image from "next/image";
+import Image from "next/image"; // import du hook Image
 import useThemeStore from "@/store/themeStore"; // on importe le store global
 import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
-import { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react"; // import des outils react 
 
 export default function Home() {
 
@@ -11,25 +11,25 @@ export default function Home() {
 
   const [ themeActu , setThemeActu ] = useState<string>(); 
 
-  function switchTheme() {
+  function switchTheme() {  // cette fonction sert à switcher entre le theme dark et light et est déclenchée lors du clc sur la vignette ying yang
     toggleTheme();  
   }; 
 
-  useEffect (() => {
+  useEffect (() => {  // ce 1er useEffect se déclenche au montage du composant et s'éxécute seulement s'il y'a un localStorage avec la propriété thème
     const valueLocalStorage = localStorage.getItem("theme"); 
     console.log("valueLocalStorage : ", valueLocalStorage); 
 
-    if(valueLocalStorage) {
+    if(valueLocalStorage) {  // s'il ya le localStorage existant on remet à jour themeActu avec la valeur enregistrée du localStorage
     setThemeActu(valueLocalStorage);  
     }
   }, [])
 
-  useEffect(() => {
+  useEffect(() => {  // ce 2ème useEffect s'éxécute si theme change (lorsque la fonction switchTheme est activée) et met à jour themeActu avec la bonne valeur 
     setThemeActu(theme)
   }, [theme])
 
   
-// pour solution localStorage en teps reel 
+// pour solution localStorage en temps reel 
 // https://stackoverflow.com/questions/72918582/why-local-storage-not-working-react-js-in-real-time
 
 

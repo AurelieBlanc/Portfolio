@@ -1,14 +1,14 @@
-"use client"
+"use client" // composant executé uniquement coté client
 
-import { FaInstagram } from "react-icons/fa";
-import useThemeStore from "@/store/themeStore";
-import { useEffect, useState } from "react"; 
+import { FaInstagram } from "react-icons/fa"; // import icone instagram
+import useThemeStore from "@/store/themeStore"; // import du store global
+import { useEffect, useState } from "react"; // import des hooks react
 import Link from "next/link"; // import pour les liens
 
 
 export default function Footer() {
 
-
+// CODE pour gérer le thème couleur avec localStorage : ----------------------------------------------------------------------------------------------------//
 
     const { theme, colorBar } = useThemeStore(); 
 
@@ -16,7 +16,6 @@ export default function Footer() {
 
     useEffect (() => {
         const valueLocalStorage = localStorage.getItem("theme"); 
-        console.log("valueLocalStorage : ", valueLocalStorage); 
     
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
@@ -29,6 +28,8 @@ export default function Footer() {
 
     const couleurLight = " text-black border-black"; 
     const couleurDark = "text-white border-white "; 
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------//
 
     return (
         <div
@@ -44,8 +45,6 @@ export default function Footer() {
                     </Link>
                 </span>
             </p>
-
-            
 
         </div>
     )
