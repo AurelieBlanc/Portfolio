@@ -27,7 +27,6 @@ export default function FullStackPage () {
 
     useEffect (() => {
         const valueLocalStorage = localStorage.getItem("theme"); 
-        console.log("valueLocalStorage : ", valueLocalStorage); 
     
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  

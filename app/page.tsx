@@ -27,7 +27,6 @@ export default function Home() {
 
   useEffect (() => {  // ce 1er useEffect se déclenche au montage du composant et s'éxécute seulement s'il y'a un localStorage avec la propriété thème
     const valueLocalStorage = localStorage.getItem("theme"); 
-    console.log("valueLocalStorage : ", valueLocalStorage); 
 
     if(valueLocalStorage) {  // s'il ya le localStorage existant on remet à jour themeActu avec la valeur enregistrée du localStorage
     setThemeActu(valueLocalStorage);  

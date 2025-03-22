@@ -23,7 +23,6 @@ export default function PresentationPage () {
 
     useEffect (() => {
         const valueLocalStorage = localStorage.getItem("theme"); 
-        console.log("valueLocalStorage : ", valueLocalStorage); 
     
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  

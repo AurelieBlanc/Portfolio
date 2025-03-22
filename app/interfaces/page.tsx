@@ -23,8 +23,7 @@ export default function InterfacePage () {
 
     useEffect (() => {
         const valueLocalStorage = localStorage.getItem("theme"); 
-        console.log("valueLocalStorage : ", valueLocalStorage); 
-    
+       
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
