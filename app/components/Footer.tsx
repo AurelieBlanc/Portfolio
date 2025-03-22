@@ -1,9 +1,15 @@
 "use client" // composant executé uniquement coté client
 
-import { FaInstagram } from "react-icons/fa"; // import icone instagram
+
+// Section pour les imports : ----------------------------------------------------------------------------------------------------------------------//
+
+import { FaInstagram } from "react-icons/fa"; // import icone instagram <FaInstagram />
 import useThemeStore from "@/store/themeStore"; // import du store global
 import { useEffect, useState } from "react"; // import des hooks react
 import Link from "next/link"; // import pour les liens
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------//
+
 
 
 export default function Footer() {
@@ -30,6 +36,8 @@ export default function Footer() {
     const couleurDark = "text-white border-white "; 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
 
     return (
         <div

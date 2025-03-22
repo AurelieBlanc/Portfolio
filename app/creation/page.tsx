@@ -1,18 +1,26 @@
-"use client"
+"use client" // composant éxécuté uniquement coté client
 
-import Image from "next/image";
-import useThemeStore from "@/store/themeStore"; // on importe le store global
-import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
-import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
-import { ImEye } from "react-icons/im"; // import eye
-import { FaInstagram } from "react-icons/fa"; // import icone insta 
-import { useEffect, useState } from "react"; 
 
-import Link from "next/link";
+// Code pour les imports : ---------------------------------------------------------------------------------------------------------//
+
+import Image from "next/image";  // import de l'outil Image
+import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante  <PiFlyingSaucerDuotone />
+import { BsFillCloudFog2Fill } from "react-icons/bs";// import icone nuage speed (pour Exit) <BsFillCloudFog2Fill />
+import { ImEye } from "react-icons/im"; // import eye , icone oeil  <ImEye />
+import { FaInstagram } from "react-icons/fa"; // import icone insta   <FaInstagram />
+import { useEffect, useState } from "react"; // import des outils React
+import Link from "next/link"; // import de l'outil Lien
+
+//------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
 
 export default function CreationPage () {
 
-    const { theme } = useThemeStore(); 
+
+
+// CODE pour le thème dark/light géré par le localStorage :-------------------------------------------------------------------------------------------------//
 
     const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -28,6 +36,12 @@ export default function CreationPage () {
     const light = "bg-parchemin text-black"
     const dark = "bg-black text-white"
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
+
     return (
         <div
             className={`h-full  ${ themeActu === "light" ? light : dark}`}>
@@ -36,27 +50,23 @@ export default function CreationPage () {
                 className="flex justify-end p-5 text-xl underline font-bangers">
     
                 <Link href="/">
-                <BsFillCloudFog2Fill
- 
-                    className="text-3xl mr-1 inline-block"/>
-                    EXIT par ici !!!
-                    
+                    <BsFillCloudFog2Fill
+                        className="text-3xl mr-1 inline-block"/>
+                        EXIT par ici !!!
                 </Link>
             </p>
 
             <h2
                 className="text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                  Bienvenue sur la page création de contenus 
+                Bienvenue sur la page création de contenus 
             </h2>
             
             <div
                 className="w-[80%] mx-auto">
-
                 <p
                     className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                       Sur cette page, je vous partagerais quelques unes de mes créations. 
+                    Sur cette page, je vous partagerais quelques unes de mes créations. 
                 </p>
-
 
                 <h3
                     className="text-3xl mt-10 font-bangers mb-5">
@@ -69,7 +79,7 @@ export default function CreationPage () {
                     className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-7">
                      <ImEye 
                             className="inline-block text-3xl pr-2 "/>
-                       Quelques logos réalisés. 
+                            Quelques logos réalisés. 
                       
                 </p>
 
@@ -165,11 +175,6 @@ export default function CreationPage () {
                                     height={300}
                                 />
                         </div>
-                        
-
-
-                        
-
                 </div>
 
 
@@ -185,7 +190,7 @@ export default function CreationPage () {
                     className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-5">
                         <ImEye 
                             className="inline-block text-3xl pr-2 "/>
-                        100% créées par Lili : 
+                            100% créées par Lili : 
                       
                 </p>
 
@@ -255,9 +260,6 @@ export default function CreationPage () {
                                     height={300}
                                 />
                         </div>
-
-                        
-
                 </div>
 
                 <h3
@@ -332,8 +334,6 @@ export default function CreationPage () {
                         </Link>
                 </p>
 
-                
-                
             </div>
 
         </div>

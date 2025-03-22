@@ -1,7 +1,13 @@
 "use client"; // composant éxécuté uniquement coté client 
 
+
+// Section pour les imports : -------------------------------------------------------------------------------------------------------//
+
 import { useState, useEffect } from "react"; // pour mettre en place les states locaux
 import useThemeStore from "@/store/themeStore"; // import du store global
+
+//------------------------------------------------------------------------------------------------------------------------------------//
+
 
 
 export default function MessagesBar () {

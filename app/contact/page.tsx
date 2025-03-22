@@ -1,8 +1,10 @@
 "use client" // composant éxécuté uniquement coté client
 
-// import useThemeStore from "@/store/themeStore"; // on importe le store global
-import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
-import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
+
+// Section pour les Imports : ----------------------------------------------------------------------------------------//
+
+import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante <PiFlyingSaucerDuotone />
+import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit)  <BsFillCloudFog2Fill />
 import { ImEye } from "react-icons/im"; // import eye <ImEye />
 import { GiRotaryPhone } from "react-icons/gi"; // import icone tel retro <GiRotaryPhone />
 import { AiTwotoneMail } from "react-icons/ai"; // import icone mail  <AiTwotoneMail />
@@ -11,9 +13,14 @@ import { useEffect, useState, ChangeEvent, FormEvent } from "react"; // import d
 import Link from "next/link"; // import de Link
 import * as Yup from "yup"; // import du schéma de validation de données YUP
 
+//----------------------------------------------------------------------------------------------------------------------//
+
+
+
+
 export default function ContactPage () {
 
-    // Code pour le THEME avec gestion en LOCAL STORAGE :-------------------------------------------------------------// 
+// Code pour le THEME avec gestion en LOCAL STORAGE :-----------------------------------------------------------------// 
 
     const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -28,14 +35,14 @@ export default function ContactPage () {
     const light = "bg-parchemin text-black"
     const dark = "bg-black text-white"
 
-    //-----------------------------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------------------------------//
 
 
 
 
 
 
-    // Code pour la GESTION DE l'AFFICHAGE DE L'EMAIL OU DU NUMERO :--------------------------------------------------//
+// Code pour la GESTION DE l'AFFICHAGE DE L'EMAIL OU DU NUMERO :----------------------------------------------------------//
 
     const [ hidden, setHidden ] = useState<boolean>(true);  // on cree un state qui gere un boolean 
 
@@ -43,14 +50,14 @@ export default function ContactPage () {
         setHidden(prevState => !prevState); 
     }
 
-    //----------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------------------------------------------------------------------------------//
 
 
 
 
 
 
-    // Code pour la GESTION et soumission du FORMULAIRE DE CONTACT  : ----------------------------------------------------//
+// Code pour la GESTION et soumission du FORMULAIRE DE CONTACT  : ---------------------------------------------------------//
 
     interface Contact {   // on type le state contactForm
         nom: string, 
@@ -125,7 +132,9 @@ export default function ContactPage () {
         }
     }
 
-    //------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------//
+
+
 
     return (
         <div
@@ -135,11 +144,9 @@ export default function ContactPage () {
                 className="flex justify-end p-5 text-xl underline font-bangers">
     
                 <Link href="/">
-                <BsFillCloudFog2Fill
- 
-                    className="text-3xl mr-1 inline-block"/>
-                    EXIT par ici !!!
-                    
+                    <BsFillCloudFog2Fill
+                        className="text-3xl mr-1 inline-block"/>
+                        EXIT par ici !!!
                 </Link>
             </p>
 
@@ -177,6 +184,7 @@ export default function ContactPage () {
                                             Téléphone : 06.60.72.79.51
                                         </span>
                                 </li>
+
                                 <li
                                     className="pt-8">
                                      <AiTwotoneMail 
@@ -189,7 +197,7 @@ export default function ContactPage () {
 
                                         <span
                                             className={`block pt-2 ${ hidden === false ? "": "hidden"}`}>
-                                             Email : aurelieblanc86@gmail.com
+                                            Email : aurelieblanc86@gmail.com
                                         </span>  
                                        
                                 </li>

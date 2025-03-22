@@ -1,11 +1,21 @@
 "use client"; // composant éxécuté uniquement coté client
 
+
+// CODE pour les IMPORTS : ------------------------------------------------------------------------------------------------------------------------------//
+
 import Image from "next/image"; // import du hook Image
 import useThemeStore from "@/store/themeStore"; // on importe le store global
 import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
 import { useEffect, useState } from "react"; // import des outils react 
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
 export default function Home() {
+
+// Code pour gerer le theme dark/light à partir du localStorage: --------------------------------------------------------------------------------------------//
 
   const { toggleTheme, theme } = useThemeStore(); 
 
@@ -32,10 +42,12 @@ export default function Home() {
 // pour solution localStorage en temps reel 
 // https://stackoverflow.com/questions/72918582/why-local-storage-not-working-react-js-in-real-time
 
-
-
   const soleilBlanc = "/images/vignettes/VignettesYinYangSoleilBlanc.png"
   const soleilNoir = "/images/vignettes/VignettesYinYangSoleilNoir.png"
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
 
 
   return (
@@ -45,10 +57,8 @@ export default function Home() {
     
     <div className={`w-[70%] mx-auto  flex justify-center flex-wrap gap-8 pt-8 pb-8 ${ themeActu === "light" ? "bg-parchemin" : "bg-black"}`}>
      
-
         <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
-          >
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
             <Link href="full-stack">
               <Image
                 src="/images/vignettes/VignettesFS.png"
@@ -111,7 +121,6 @@ export default function Home() {
             </Link>
         </div>
 
-       
         <div
           className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
           onClick={switchTheme}>
@@ -122,12 +131,9 @@ export default function Home() {
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
-              />
-              
+              />  
         </div>
        
-       
-
     </div>
 
   </div>

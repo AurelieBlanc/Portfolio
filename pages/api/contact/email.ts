@@ -1,7 +1,15 @@
+// Code pour les IMPORTS : -------------------------------------------------------------------------------------------------------------------------------//
+
 import type { NextApiRequest, NextApiResponse } from "next"; // import des types
-import nodemailer from "nodemailer"; // import de nodemailer
+import nodemailer from "nodemailer"; // import de nodemailer pour l'envoi des infos du formulaire par email
 import * as Yup from "yup"; // import du schéma de validation de données YUP
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
+// Code pour le schéma de validation de données YUP : ------------------------------------------------------------------------------------------------------//
 
  const contactFormSchema = Yup.object().shape({
         nom: Yup.string()
@@ -21,15 +29,28 @@ import * as Yup from "yup"; // import du schéma de validation de données YUP
         .matches(/^[\s\S]*$/, 'Le message peut contenir toutes les lettres et caractères spéciaux.') // Accepte tout type de caractères
     })
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
 
 export default async function handlerEmail (req: NextApiRequest, res: NextApiResponse) {
-    if(req.method !== "POST") {
+  
+//si la méthode de la requête n'est pas POST, on stoppe le code avec un return: 
+    if(req.method !== "POST") { 
         return res.status(405).json({ message: "methode HTTP non autorisée"})
     }
 
-    const formData = req.body; 
 
-     try { // on va tout d'abord valider coté front avec YUP si les données soumises sont correctes
+
+//on récupère tout l'objet envoyé en body dans une constante formData: 
+const formData = req.body; 
+
+
+
+// ON VALIDE les données AUSSI coté back, si les données transmises sont correctes, sinon on stoppe le code dans un catch error :----------------------------------------//
+     try { 
                 
         await contactFormSchema.validate (formData, { abortEarly: false }); // abortEarly pour collecter toutes les erreurs de validation meme si l'erreur se trouve sur le premie champ (par defaut Yup s'arrete des qu'il rencontre une erreur, donc là avec false, on recup toutes les erreurs)
         console.log("formulaire soumis avec succès", formData); 
@@ -38,19 +59,32 @@ export default async function handlerEmail (req: NextApiRequest, res: NextApiRes
                 console.error(error); 
                 return res.status(400).json({ message: error}) 
         }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------//
     
-        const { nom, email, telephone, message } = formData; 
 
+
+
+// on récupère les différentes propriétés de l'objet formData: 
+    const { nom, email, telephone, message } = formData; 
+
+
+
+// CODE pour vérifier que les variables d'environnement soient bien définies pour eviter des erreurs:------------------------------------------------------------//
     if(!process.env.EMAIL_USER) {
         throw new Error ("process.env.EMAIL_USER pas défini !")
     }; 
 
     if(!process.env.EMAIL_PASS) {
         throw new Error ("process.env.EMAIL_PASS pas défini !")
-    }; 
+    };
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
-    try {
 
+
+
+// CODE pour l'envoi de l'email grace à nodemailer avec les infos recueillies dans formData :-----------------------------------------------------------------------//
+
+try {  // création du transporteur nodeMailer avec les paramètres d'authentification Gmail:
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth:{
@@ -59,6 +93,7 @@ export default async function handlerEmail (req: NextApiRequest, res: NextApiRes
             }, 
         }); 
 
+        // là on définit ce que l'on veut dans le contenu de l'email :
         const mailOptions = {
             from: process.env.EMAIL_USER, 
             to: process.env.EMAIL_USER, 
@@ -71,13 +106,16 @@ export default async function handlerEmail (req: NextApiRequest, res: NextApiRes
                 message: ${message}`
         }; 
 
+        // envoi l'email de manière asynchrone (cad que le programme ne bloque pas l'éxécution en attendant la réponse de l'envoi de l'email)
         await transporter.sendMail(mailOptions); 
 
+        // si l'envoi réussit alors on retourne un status 200 indiquant que la requete a été éxécutée avec succès :
         return res.status(200).json({ message: "Email envoyé avec succès !"})
 
-        } catch(error) {
+        } catch(error) { // si requete pas ok on déclenche une erreur :
         console.error("error : ", error)
         return res.status(500).json({ message: "Erreur lors de l'envoi de l'email"}); 
-       
-    }
+       }
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
 }; 

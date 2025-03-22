@@ -1,14 +1,20 @@
 "use client" // composant éxécuté coté client seulement
 
-import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
+
+// Section pour les imports : --------------------------------------------------------------------------------//
+
+import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante <PiFlyingSaucerDuotone />
 import { useEffect, useState } from "react"; // import des hooks react
 import useThemeStore from "@/store/themeStore"; // import du store global
+
+//---------------------------------------------------------------------------------------------------------------//
+
 
 
 export default function Banner() {
 
 
-// Code pour gerer le theme avec localStorage : -------------------------------------------------------------//
+// Code pour gerer le theme avec localStorage : ---------------------------------------------------------------//
 
     const { theme } = useThemeStore(); 
 

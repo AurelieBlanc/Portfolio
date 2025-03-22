@@ -1,21 +1,27 @@
-"use client"
-
-import useThemeStore from "@/store/themeStore"; // on importe le store global
-import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante
-import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) 
-import { ImEye } from "react-icons/im"; // import eye
-import { MdSecurity } from "react-icons/md"; // icone sécurité
-import { FaInstagram } from "react-icons/fa"; // icone instagram
-import { useEffect, useState } from "react"; 
-
-import Image from "next/image"; 
+"use client" // composant éxécuté uniquement coté client
 
 
+
+// La section IMPORTS : -------------------------------------------------------------------------------------------------------------------------------//
+
+import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante <PiFlyingSaucerDuotone />
+import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit)  <BsFillCloudFog2Fill />
+import { ImEye } from "react-icons/im"; // import eye, icone oeil  <ImEye />
+import { MdSecurity } from "react-icons/md"; // icone sécurité <MdSecurity />
+import { FaInstagram } from "react-icons/fa"; // icone instagram <FaInstagram />
+import { useEffect, useState } from "react"; // import des hooks react
+import Image from "next/image"; // import du composant Image
 import Link from "next/link"; // import pour mettre en place des liens
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
 
 export default function FullStackPage () {
 
-    const { theme } = useThemeStore(); 
+
+// CODE pour gérer le theme dark ou light de la page en fonction du localStorage :----------------------------------------------------------------------//
 
     const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -31,35 +37,36 @@ export default function FullStackPage () {
     const light = "bg-parchemin text-black"
     const dark = "bg-black text-white"
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
     return (
         <div
             className={`h-full  ${ themeActu === "light" ? light : dark}`}>
 
             <p
-                className="flex justify-end p-5 text-xl underline font-bangers">
-    
+              className="flex justify-end p-5 text-xl underline font-bangers">
                 <Link href="/">
-                <BsFillCloudFog2Fill
+                    <BsFillCloudFog2Fill
  
                     className="text-3xl mr-1 inline-block"/>
-                    EXIT par ici !!!
-                    
+                    EXIT par ici !!! 
                 </Link>
             </p>
 
             <h2
                 className=" text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                   Bienvenue en FULL-STACK Zone !!! 
+                Bienvenue en FULL-STACK Zone !!! 
             </h2>
             
             <div
                 className="w-[80%] mx-auto">
-
                 <h3
                     className="text-3xl font-bangers ">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-
                         Site e-commerce en cours de développement ... A suivre...
                 </h3>
 
@@ -67,8 +74,7 @@ export default function FullStackPage () {
                     className="text-3xl mt-10 font-bangers">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-
-                    "LVDP Rencontres" Site développé en Next.js, avec Prisma et PostgresSQL : 
+                        "LVDP Rencontres" Site développé en Next.js, avec Prisma et PostgresSQL : 
                 </h3>
 
                 <p
@@ -79,19 +85,18 @@ export default function FullStackPage () {
                             href="https://lvdp-rencontres.vercel.app/">
                             lvdp-rencontres
                         </Link>
-                    
                 </p>
                 <p
                     className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
-                        Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un simple tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
-                        Le site peut paraitre simpliste, mais en réalité,  il possède pas mal de fonctionnalités que nous allons détailler, avec les aspects sécurité. 
+                    Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un simple tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
+                    Le site peut paraitre simpliste, mais en réalité,  il possède pas mal de fonctionnalités que nous allons détailler, avec les aspects sécurité. 
                 </p>
 
                 <h4
                     className="ml-5 md:ml-10 mt-6 text-2xl font-bangers"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
-                          Stack Technique : 
+                        Stack Technique : 
                 </h4>
 
                 <ul
@@ -99,19 +104,19 @@ export default function FullStackPage () {
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
-                        Next.js
+                            Next.js
                     </li>
 
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
-                        Prisma
+                            Prisma
                     </li>
 
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
-                        PostgreSQL
+                            PostgreSQL
                     </li>
                 </ul>
 
@@ -119,7 +124,7 @@ export default function FullStackPage () {
                     className="ml-5 md:ml-10 mt-6 text-2xl font-bangers pb-4"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
-                          Fonctionnalités : 
+                        Fonctionnalités : 
                 </h4>
 
                 <p
@@ -134,8 +139,7 @@ export default function FullStackPage () {
                              alt="image du formulaire pour les contacts qui se portent volontaires"
                              width={350}
                              height={350}
-                           
-                           /> 
+                            /> 
                         </div>
                     
                 </p>
@@ -144,7 +148,7 @@ export default function FullStackPage () {
                     className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
                         <MdSecurity 
                             className="inline-block pr-2 text-4xl text-red-500"/>
-                        Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
+                            Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
 
                          <div className="flex justify-center mt-4">
                            <Image
@@ -152,8 +156,7 @@ export default function FullStackPage () {
                              alt="image du formulaire pour les contacts qui se portent volontaires"
                              width={200}
                              height={200}
-                           
-                           /> 
+                            /> 
                         </div>       
                 </p>
 
@@ -169,8 +172,7 @@ export default function FullStackPage () {
                              alt="image du formulaire pour les contacts qui se portent volontaires"
                              width={200}
                              height={200}
-                           
-                           /> 
+                            /> 
                         </div>
                     
                 </p>
@@ -187,8 +189,7 @@ export default function FullStackPage () {
                              alt="image du formulaire pour les contacts qui se portent volontaires"
                              width={350}
                              height={350}
-                           
-                           /> 
+                            /> 
                         </div>
                     
                 </p>
@@ -210,9 +211,7 @@ export default function FullStackPage () {
                                 href="https://www.instagram.com/bewildbeweirdbewhite/">
                                 <FaInstagram
                                     className="ml-4 inline-block" /> 
-                            </Link>
-                            
-                    
+                            </Link>  
                 </p>
 
             </div>
