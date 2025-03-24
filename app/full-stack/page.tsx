@@ -43,7 +43,7 @@ export default function FullStackPage () {
 
     return (
         <div
-            className={`h-full  ${ themeActu === "light" ? light : dark}`}>
+            className={`h-full ${ themeActu === "light" ? light : dark}`}>
 
             <p
               className="flex justify-end p-5 text-xl underline font-bangers">

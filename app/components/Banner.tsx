@@ -40,11 +40,12 @@ export default function Banner() {
 
     return(
         <div
-            className = {`"w-full h-full border-red flex flex-col justify-center items-center ${ themeActu === 'light' ? couleurLight : couleurDark}`}>
+            className = {` w-full h-full border-red flex flex-col justify-center items-center ${ themeActu === 'light' ? couleurLight : couleurDark}`}>
            
             <h1 
-                className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[50%]  mx-auto text-center mt-20 mb-10">
-                    BIENVENUE sur Un Portfolio complètement Zinzin
+                className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[40%]  mx-auto text-center mt-20 mb-10">
+                    Bienvenue sur la Planete White <br />
+                    Chez Lili <br />developpeuse web full-stack
             </h1>
 
             <PiFlyingSaucerDuotone 

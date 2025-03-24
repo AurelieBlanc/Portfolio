@@ -5,6 +5,8 @@
 
 import { PiFlyingSaucerDuotone } from "react-icons/pi"; // import icone secoupe volante <PiFlyingSaucerDuotone />
 import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour Exit) <BsFillCloudFog2Fill />
+import { TfiCommentsSmiley } from "react-icons/tfi"; // icone smiley bulle <TfiCommentsSmiley />
+import { PiSmileyDuotone } from "react-icons/pi"; // icone smiley qui rit  <PiSmileyDuotone />
 import { ImEye } from "react-icons/im"; // import eye, icone oeil  <ImEye />
 import { useEffect, useState } from "react"; // import des hooks react
 import Image from "next/image"; // import du composant Image
@@ -17,7 +19,7 @@ import Link from "next/link"; // import composant Link pour créer des liens
 
 export default function PresentationPage () {
 
-// Code pour gerer le theme Loght/dark avec le localStorage: ---------------------------------------------------------------------//
+// Code pour gerer le theme Light/dark avec le localStorage: ---------------------------------------------------------------------//
 
   const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -54,7 +56,7 @@ export default function PresentationPage () {
 
             <h2
                 className="text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                Ici ce sera la présentation !! 
+                Mais Qui Suis-Je ?
             </h2>
             
             <div
@@ -68,19 +70,29 @@ export default function PresentationPage () {
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                    Salut moi c'est Aurélie, et voici mon histoire !
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Salut moi c'est Aurélie White, et voici mon histoire !
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                    C'est à la suite de la découverte tardive (ou pas!!! Mieux vaut tard que jamais comme on dit !!) de mon syndrome d'Asperger, que j'ai décidé de me reconvertir pour enfin coller ma vie pro à ma neuroatypie.
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    C'est à la suite de la découverte tardive de mon syndrome d'Asperger, que j'ai pris un virage à 180 degrés dans ma vie pro et perso. 
                       
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
-                    C'est Ainsi que je suis tombée dans le développement et que non seulement j'aime coder mais créer aussi !
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    C'est Ainsi que je me suis naturellement tourné dans un premier temps vers l'informatique au sens large, puis j'ai jeté mon dévolu sur le développement Web, pour allier autant le coté logique et intellectuel qui me nourrit, mais aussi le coté créatif qui me ravit. 
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Après beaucoup de négociations, je suis arrivée à me faire financer une formation (très intensive) chez Oclock, et j'ai obtenu, quelques mois après, mon diplome de développeur web et web mobile front-end et back-end.
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    J'ai ensuite continué à me former sur des technos en autodidacte, et je continue toujours; tous les jours je m'entraine, avec beaucoup de plaisir, je crée, aussi bien des interfaces que du code plus poussé en montant des petits projets, et je dois dire que j'adore ça ! Le code a été une révélation. 
                 </p>
 
 
@@ -93,12 +105,26 @@ export default function PresentationPage () {
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-10">
-                    Autant capable de vous coder un site vitrine qu'un site full-stack, autant capable de vous inventer des thèmes ou des univers, je vous mets les differentes technos que je maitrise (MAIS , étant autodidacte je suis bien évidemment capable d'en apprendre d'autres et partante !!) : 
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Voici mes différentes compétences , exposées ci-dessous. 
+                   
+                </p>
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Je suis specialisée en Next.js mais peut apprendre un nouveau langage sans problème. 
+                   
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic pb-12">
+                   
+                    Je serais ravie de mettre mes compétences et ma motivation à votre service
+                        <PiSmileyDuotone
+                            className="inline-block ml-1 text-2xl" />.
                 </p>
 
                 <div
-                    className="flex flex-wrap gap-4 justify-center pb-10">
+                    className="flex flex-wrap gap-4 justify-center pb-12">
                         <div
                             className="">
                                 <Image
@@ -136,6 +162,51 @@ export default function PresentationPage () {
                                 />
                         </div>
 
+                </div>
+
+                <h3
+                    className="text-3xl font-bangers ">
+                     <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+                        Ma Philosophie de Travail :  
+                </h3>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Coder et créer sont vraiment 2 choses que j'affectionne, et que j'essaie de faire bien, étant de nature appliquée et perfectionniste.
+                </p>
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    J'ai une grande conscience professionnelle et je saurai vous satisfaire par ma motivation et ma puissance de travail, qui est très présente chez les Asperger qui aiment ce qu'ils réalisent.
+                </p>
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Tres persévérante et autonome, j'arrive toujours à trouver une solution sur des codes un peu récalcitrants. On peut dire que je ne laisse jamais tomber <PiSmileyDuotone
+                            className="inline-block ml-1 text-2xl" /> !!!
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
+                    Je suis aussi dotée d'une assez grande empathie, ce qui me permet de bien capter la personnalité de mon interlocuteur et de pouvoir créer une interface, un univers à son image, et également de m'adapter et de bien m'intégrer dans une équipe, tout en respectant mes spécificités.
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic pb-10">
+                   J'aimerais donc vraiment faire partie d'une entreprise, pour continuer à apprendre et monter en compétences.  
+                </p>
+
+                <div
+                    className=" mt-4 text-3xl font-bangers pb-14">
+                    <ImEye 
+                        className="inline-block pr-3 text-4xl"/>
+                    
+                    Pour télécharger mon CV : 
+
+                    <a 
+                        href="/docs/cv.pdf"
+                        className="underline ml-4">
+                        Clique ici
+                    </a>
                 </div>
                 
             </div>

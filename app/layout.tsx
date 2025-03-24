@@ -47,7 +47,7 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lilita+One&display=swap" rel="stylesheet"/>
       </head>
       <body
-        className=""
+        className="tracking-wider"
         // {`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Banner />
