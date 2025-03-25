@@ -6,6 +6,7 @@
 import Image from "next/image"; // import du hook Image
 import useThemeStore from "@/store/themeStore"; // on importe le store global
 import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
+import { motion } from "motion/react"; // on importe motion de react pour créer des animations
 import { useEffect, useState } from "react"; // import des outils react 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------//
