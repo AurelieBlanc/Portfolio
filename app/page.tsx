@@ -6,7 +6,7 @@
 import Image from "next/image"; // import du hook Image
 import useThemeStore from "@/store/themeStore"; // on importe le store global
 import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
-import { motion } from "motion/react"; // on importe motion de react pour créer des animations
+import * as motion from "motion/react-client"; // on importe motion de react pour créer des animations
 import { useEffect, useState } from "react"; // import des outils react 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -57,33 +57,66 @@ export default function Home() {
     
     <div className={`w-[70%] mx-auto  flex justify-center flex-wrap gap-8 pt-8 pb-8 ${ themeActu === "light" ? "bg-parchemin" : "bg-black"}`}>
      
-        <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
+        <motion.div
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}
+          >
             <Link href="full-stack">
               <Image
                 src="/images/vignettes/VignettesFS.png"
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />
             </Link>
-        </div>
+        </motion.div>
 
-        <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
-
+        <motion.div
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}
+          >
             <Link href="interfaces">
               <Image
                 src="/images/vignettes/VignettesInterface.png"
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />
             </Link>
-        </div>
+        </motion.div>
 
-        <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
+        <motion.div
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}>
             <Link
               href="creation">
               <Image
@@ -91,12 +124,24 @@ export default function Home() {
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />
             </Link>
-        </div>
+        </motion.div>
 
-        <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
+        <motion.div
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}
+         >
             
             <Link href="presentation">
               <Image
@@ -104,12 +149,23 @@ export default function Home() {
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />
             </Link>
-        </div>
+        </motion.div>
 
-        <div
-          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}>
+        <motion.div
+          className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}>
 
             <Link href="contact">
               <Image
@@ -117,13 +173,24 @@ export default function Home() {
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />
             </Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
           className={themeActu === "light" ? "border-4 border-black" : "border-4 border-white"}
-          onClick={switchTheme}>
+          onClick={switchTheme}
+          animate={{ rotate: 180 }}
+          transition={{ duration: 2}}
+          whileHover = {{
+            scale: [null, 1.1, 1.2], 
+            transition: {
+              duration: 0.5, 
+              times: [0, 0.6, 1], 
+              ease: [ "easeInOut", "easeOut"]
+            }
+          }}>
             
               <Image
               
@@ -131,8 +198,9 @@ export default function Home() {
                 alt="vignette avec paysage minimaliste pour présenter le travail en Full-Stack"
                 width={400}
                 height={400}
+                className="transform rotate-180"
               />  
-        </div>
+        </motion.div>
        
     </div>
 

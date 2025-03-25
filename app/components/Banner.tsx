@@ -39,11 +39,14 @@ export default function Banner() {
 
 
 
+
 // CODE pour gérer les animations --------------------------------------------------------------------------------------------------------------// 
 
 const [ message, setMessage ] = useState<string>(""); // pour générer un message à l'arrivée de la soucoupe volante
+const [ messageShown, setMessageShown ] = useState(false); // pour eviter le clignotement des messages de la soucoupe
 
 //----------------------------------------------------------------------------------------------------------------------------------------------// 
+
 
 
 
@@ -54,8 +57,8 @@ const [ message, setMessage ] = useState<string>(""); // pour générer un messa
            
             <h1 
                 className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[40%]  mx-auto text-center mt-20 mb-10">
-                    Bienvenue sur la Planete White <br />
-                    Chez Lili <br />developpeuse web full-stack
+                    Bienvenue chez Lili White <br />
+                    Developpeuse web full-stack
             </h1>
 
             <div className="relative w-[300px] h-[150px]">
@@ -77,11 +80,19 @@ const [ message, setMessage ] = useState<string>(""); // pour générer un messa
                     const max = latest.x ? latest.x : 0;  
 
                     const maxX = Number(max); 
+
+                    const messages = ["Bim !!!", "Bam !!!", "Boum !!!"];
                    
-                    if(maxX >= 90) {
-                        setMessage("BiM !!!")
-                    } else {
+                   
+                    if(maxX >= 110 && messageShown === false ) {
+                        
+                        const indexHasard = Math.floor(Math.random()*messages.length); 
+                        setMessage(messages[indexHasard]); 
+                        setMessageShown(true); 
+
+                    } else if(maxX < 110 && messageShown === true) {
                         setMessage(""); 
+                        setMessageShown(false); 
                     }
                 }}
             >
