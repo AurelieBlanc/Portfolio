@@ -74,14 +74,25 @@ const [ messageShown, setMessageShown ] = useState(false); // pour eviter le cli
                     scale: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3]
                 }}
                
-                transition={{ duration: 8,  ease: "easeInOut", repeat: Infinity, repeatType: "reverse", }}
+                transition={{ duration: 5,  ease: "easeInOut", repeat: Infinity, repeatType: "reverse", }}
                 onUpdate={(latest: ResolvedValues ) => {
 
                     const max = latest.x ? latest.x : 0;  
 
                     const maxX = Number(max); 
 
-                    const messages = ["Bim !!!", "Bam !!!", "Boum !!!"];
+                    const messages = [
+                        "M'en Vais!!",
+                        "Cloclo Forever",
+                        "Flower power",
+                        "UFO lover",
+                        "NanaNanère", 
+                        "Sur Terre, ça fouette !!", 
+                        "Rebelle va !!", 
+                        "opé pour la bagarre", 
+                        "Pillier de bar va !", 
+                        "je suis le + bo !"
+                        ];
                    
                    
                     if(maxX >= 110 && messageShown === false ) {
@@ -110,7 +121,7 @@ const [ messageShown, setMessageShown ] = useState(false); // pour eviter le cli
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.5 }}
                         transition={{ duration: 0.5}}
-                        className="text-center font-bangers text-xl pr-8"
+                        className="text-center font-bangers text-xl pr-10"
                     >{message}
                 </motion.div>)}                
                 </AnimatePresence>
