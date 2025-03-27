@@ -55,11 +55,32 @@ const [ messageShown, setMessageShown ] = useState(false); // pour eviter le cli
         <div
             className = {` w-full h-full border-red flex flex-col justify-center items-center ${ themeActu === 'light' ? couleurLight : couleurDark}`}>
            
-            <h1 
-                className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[40%]  mx-auto text-center mt-20 mb-10">
-                    Bienvenue chez Lili White <br />
-                    Developpeuse web full-stack
-            </h1>
+            <motion.div
+                 initial={{ x: 0, y:0 }}
+                 animate={{
+                     scale: [0, 1.2, 0.6, 1]
+                 }}
+                
+                 transition={{ duration: 2,  ease: "easeInOut", }}>
+                <h1 
+                    className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[60%]  mx-auto text-center mt-20 mb-2">
+                    Lili White <br />
+                    Dev web full-stack <br />
+                </h1>
+            </motion.div>
+
+            <motion.div
+                 initial={{ x: 0, y:0 }}
+                 animate={{
+                    scale: [0, 1.2, 0.5, 1]
+                }}
+               
+                transition={{ duration: 2,  ease: "easeInOut", delay: 1 }}>
+
+                <h2
+                    className="font-bangers tracking-wide text-3xl w-[70%] md:text-4xl md:w-[60%]  mx-auto text-center mt-2 mb-10">
+                    Pour vous servir </h2>
+            </motion.div>
 
             <div className="relative w-[300px] h-[150px]">
 

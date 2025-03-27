@@ -53,18 +53,18 @@ export default function FullStackPage () {
 
 
 const tableDevArt = [
-    { id: 0, type:"image", path: "/images/imprEcran/DevArt/DevArtGalerie.png" }, 
-    { id: 1, type:"image", path: "/images/imprEcran/DevArt/DevArtHome.png" }, 
-    { id: 2, type:"video", path: "/videos/DevArt/devArtDemo.mp4" }, 
+    { id: 0, type:"image", path: "/images/imprEcran/DevArt/DevArtGalerie.png", pt: "" }, 
+    { id: 1, type:"image", path: "/images/imprEcran/DevArt/DevArtHome.png", pt: "pt-10" }, 
+    { id: 2, type:"video", path: "/videos/DevArt/devArtDemo.mp4", ptMobile: "pt-20" , ptLaptop: "pt-10"}, 
 ]; 
 
 
 const tableLVDP = [
-    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300 }, 
-    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300 }, 
-    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200  }, 
-    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 200, height: 200 }, 
-    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300 }, 
+    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10" }, 
+    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10" }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "" }, 
+    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 200, height: 200, ptMobile: "" }, 
+    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10" }, 
 ]; 
 
 
@@ -223,7 +223,7 @@ const tableLVDP = [
                 </ul>
 
                 <Swiper navigation={true} modules={[Navigation]} 
-                        className="mySwiper w-full h-full mx-auto mt-10">
+                        className="mySwiper w-full h-full mt-10 flex items-center justify-center">
 
                 { tableDevArt.map((elem) => {
 
@@ -231,11 +231,12 @@ const tableLVDP = [
                         return (
 
                         <SwiperSlide 
-                            className="text-center flex justify-center items-center"
+                            className="flex justify-center items-center h-full"
                             key={elem.id}>
                             <div
-                                className="flex justify-center items-center">
+                                className={`flex justify-center items-center ${elem.pt}`}>
                                 <Image
+                                    
                                     src= {elem.path}
                                     width={500}
                                     height={400}
@@ -248,15 +249,17 @@ const tableLVDP = [
                     } else if (elem.type === "video") { 
                         return (
                             <SwiperSlide 
-                                className="text-center flex justify-center items-center"
+                                className="flex justify-center items-center h-full"
                                 key={elem.id}>
                                 <div
                                     className="flex justify-center items-center">
-                                        <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
+                                        <video 
+                                            className= {`w-[80%] md:w-[75%] lg:w-[50%] mx-auto ${elem.ptMobile} md:${elem.ptLaptop}`}
+                                            controls >
                                             <source 
-                                            src= {elem.path}
-                                            type="video/mp4"
-                                            className="" />
+                                                src= {elem.path}
+                                                type="video/mp4"
+                                                 />
     
                                         </video>
     
@@ -384,7 +387,7 @@ const tableLVDP = [
                             className="text-center flex justify-center items-center"
                             key={elem.id}>
                             <div
-                                className="flex justify-center items-center ">
+                                className={`flex justify-center items-center ${elem.ptMobile} md:pt-0`}>
                                     <Image
                                         src= {elem.path}
                                         width={elem.width}

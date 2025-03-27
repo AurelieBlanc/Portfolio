@@ -51,9 +51,9 @@ const tableOPictures = [
 
 
 const tableDevArt = [
-    { id: 0, style: "image", path: "/images/imprEcran/DevArt/DevArtGalerie.png", width: 300, height: 300, description: "Page de la Galerie"},
-    { id: 1, style: "image", path: "/images/imprEcran/DevArt/DevArtHome.png", description: "Page d'Accueil", width: 400, height: 300},
-    { id: 2, style: "image", path: "/images/imprEcran/DevArt/Essai.png", description: "Essai Intégration", width: 600, height: 300},
+    { id: 0, style: "image", path: "/images/imprEcran/DevArt/DevArtGalerie.png", width: 300, height: 300, description: "Page de la Galerie", ptMobile: ""},
+    { id: 1, style: "image", path: "/images/imprEcran/DevArt/DevArtHome.png", description: "Page d'Accueil", width: 400, height: 300, ptMobile: "pt-6" },
+    { id: 2, style: "image", path: "/images/imprEcran/DevArt/Essai.png", description: "Essai Intégration", width: 600, height: 300, ptMobile: "pt-20" },
     
 ]
 
@@ -213,14 +213,14 @@ const tableDevArt = [
 {/* // Code pour Develop'Art : -----------------------------------------------------------------------------------------------------------------------------// */}
 
                 <h3
-                    className="text-3xl mt-20 font-bangers">
+                    className="text-3xl mt-20 font-bangers 2xl:text-center">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Integration du site Dévelop'Art
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4 2xl:text-center">
                     Interface avec effet adaptable et design changeant, quelque soit le format de l'écran:
 
                 </p>
@@ -236,7 +236,7 @@ const tableDevArt = [
                                 <div
                                     className="flex justify-center items-center">
                                     <div
-                                        className="flex flex-col justify-center items-center">
+                                        className={`flex flex-col justify-center items-center ${elem.ptMobile} md:pt-0`}>
                                             <Image 
                                                 src= {elem.path}
                                                 alt={elem.description}

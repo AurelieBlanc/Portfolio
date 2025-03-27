@@ -17,7 +17,7 @@ module.exports = {
           "blueDark" : "#06869D", 
           "sable" : "#DB976D", 
           "prune" : "#A91A5F", 
-          "gris" : "#737373", 
+          "gris" : "#A6A7A7", 
           "parchemin": "#EFD2AB"
         } 
       },
