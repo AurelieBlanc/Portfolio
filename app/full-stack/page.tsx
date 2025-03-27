@@ -55,16 +55,16 @@ export default function FullStackPage () {
 const tableDevArt = [
     { id: 0, type:"image", path: "/images/imprEcran/DevArt/DevArtGalerie.png" }, 
     { id: 1, type:"image", path: "/images/imprEcran/DevArt/DevArtHome.png" }, 
-    { id: 2, type:"video", path: "/videos/devArtDemo.mp4" }, 
+    { id: 2, type:"video", path: "/videos/DevArt/devArtDemo.mp4" }, 
 ]; 
 
 
 const tableLVDP = [
-    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png" }, 
-    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png" }, 
-    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png" }, 
-    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png" }, 
-    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png" }, 
+    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300 }, 
+    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300 }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200  }, 
+    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 200, height: 200 }, 
+    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300 }, 
 ]; 
 
 
@@ -102,6 +102,10 @@ const tableLVDP = [
                         className=" inline-block mr-3"/>
                         Site e-commerce en cours de développement ... A suivre...
                 </h3>
+
+
+
+
 
 {/* // Code pour le site WEEKYPLANNER : ---------------------------------------------------------------------------------------------------------------------// */}
                 <h3
@@ -164,7 +168,7 @@ const tableLVDP = [
                         <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
                             
                             <source 
-                                src="/videos/weekyDemo.mp4" 
+                                src="/videos/WeekyPlanner/weekyDemo.mp4" 
                                 type="video/mp4"
                                 className="" />
 
@@ -266,6 +270,12 @@ const tableLVDP = [
                     
                 </Swiper>
 
+
+
+
+            
+
+{/* // Code pour le site LVDP :---------------------------------------------------------------------------------------------------------//  */}
               
                 <h3
                     className="text-3xl mt-10 font-bangers">
@@ -276,7 +286,7 @@ const tableLVDP = [
 
                 <p
                     className="mt-10 ml-5 md:ml-11 text-xl font-lilita italic">
-                        Accès : 
+                        Accès en ligne : 
                         <Link 
                             className="underline ml-2"
                             href="https://lvdp-rencontres.vercel.app/">
@@ -285,7 +295,7 @@ const tableLVDP = [
                 </p>
                 <p
                     className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
-                    Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un simple tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
+                    Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
                     Le site peut paraitre simpliste, mais en réalité,  il possède pas mal de fonctionnalités que nous allons détailler, avec les aspects sécurité. 
                 </p>
 
@@ -364,24 +374,26 @@ const tableLVDP = [
                     
                 </p>
 
-                <Swiper navigation={true} modules={[Navigation]} 
-                        className="mySwiper w-full h-[400px] mx-auto mt-10">
+                <Swiper navigation={true}
+                        modules={[Navigation]} 
+                        className="mySwiper w-full h-full mx-auto mt-10"
+                        >
 
                     {tableLVDP.map((elem) =>
                         <SwiperSlide 
                             className="text-center flex justify-center items-center"
                             key={elem.id}>
                             <div
-                                className="flex justify-center items-center">
+                                className="flex justify-center items-center ">
                                     <Image
                                         src= {elem.path}
-                                        width={500}
-                                        height={400}
+                                        width={elem.width}
+                                        height={elem.height}
                                         alt="image de la page d'accueil de developart"
                             />
                             </div>
                         </SwiperSlide> 
-                    )};          
+                    )}        
                     
                 </Swiper>
 
