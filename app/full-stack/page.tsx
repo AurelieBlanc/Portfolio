@@ -13,9 +13,11 @@ import { useEffect, useState } from "react"; // import des hooks react
 import Image from "next/image"; // import du composant Image
 import Link from "next/link"; // import pour mettre en place des liens
 import { Swiper, SwiperSlide } from "swiper/react" // import de swiper pour mettre en place des carroussels
-import { Pagination } from "swiper/modules"; 
+ 
 import "swiper/css" ; // import des styles de Swiper
-import "swiper/css/pagination"; 
+import "swiper/css/navigation"; 
+
+import { Navigation } from "swiper/modules";
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -51,15 +53,19 @@ export default function FullStackPage () {
 
 
 const tableDevArt = [
-    { elem: 0, type:"image", path: "/images/imprEcran/DevArt/DevArtGalerie.png" }, 
-    { elem: 1, type:"image", path: "/images/imprEcran/DevArt/DevArtHome.png" }, 
-    { elem: 2, type:"video", path: "/videos/devArtDemo.mp4" }, 
+    { id: 0, type:"image", path: "/images/imprEcran/DevArt/DevArtGalerie.png" }, 
+    { id: 1, type:"image", path: "/images/imprEcran/DevArt/DevArtHome.png" }, 
+    { id: 2, type:"video", path: "/videos/devArtDemo.mp4" }, 
 ]; 
 
 
 const tableLVDP = [
-    
-]
+    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png" }, 
+    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png" }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png" }, 
+    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png" }, 
+    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png" }, 
+]; 
 
 
 
@@ -212,50 +218,55 @@ const tableLVDP = [
                     </li>
                 </ul>
 
-                <Swiper pagination={true} modules={[Pagination]} 
+                <Swiper navigation={true} modules={[Navigation]} 
                         className="mySwiper w-full h-full mx-auto mt-10">
-                    
-                    <SwiperSlide 
-                        className="text-center flex justify-center items-center">
+
+                { tableDevArt.map((elem) => {
+
+                    if (elem.type === "image") {
+                        return (
+
+                        <SwiperSlide 
+                            className="text-center flex justify-center items-center"
+                            key={elem.id}>
                             <div
                                 className="flex justify-center items-center">
-                                    <Image
-                                        src= {`${tableDevArt[0]?.path}` }
-                                        width={400}
-                                        height={400}
-                                        alt="image de la page d'accueil de developart"
-                                    />
+                                <Image
+                                    src= {elem.path}
+                                    width={500}
+                                    height={400}
+                                    alt="image de la page d'accueil de developart"
+                                />
                             </div>
-                    </SwiperSlide>
-                    <SwiperSlide 
-                        className="text-center flex justify-center items-center">
-                            <div
-                                className="flex justify-center items-center">
-                                    <Image
-                                        src= {`${tableDevArt[1]?.path}` }
-                                        width={400}
-                                        height={400}
-                                        alt="image de la page d'accueil de developart"
-                                    />
-                            </div>
-                    </SwiperSlide>
-                    <SwiperSlide 
-                        className="text-center flex justify-center items-center">
-                            <div
-                                className="flex justify-center items-center">
-                                    <Image
-                                        src= {`${tableDevArt[1]?.path}` }
-                                        width={400}
-                                        height={400}
-                                        alt="image de la page d'accueil de developart"
-                                    />
-                            </div>
-                    </SwiperSlide>
+                    </SwiperSlide> 
+                    );
+
+                    } else if (elem.type === "video") { 
+                        return (
+                            <SwiperSlide 
+                                className="text-center flex justify-center items-center"
+                                key={elem.id}>
+                                <div
+                                    className="flex justify-center items-center">
+                                        <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
+                                            <source 
+                                            src= {elem.path}
+                                            type="video/mp4"
+                                            className="" />
+    
+                                        </video>
+    
+                                </div>
+                            </SwiperSlide>
+                        );            
+                    } else {
+                        return null; 
+                    }
+                    })}                    
                     
                 </Swiper>
 
               
-
                 <h3
                     className="text-3xl mt-10 font-bangers">
                      <PiFlyingSaucerDuotone 
@@ -318,15 +329,6 @@ const tableLVDP = [
                         <ImEye 
                             className="inline-block text-2xl pr-2 "/>
                             Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique).
-                        
-                        <div className="flex justify-center mt-4">
-                           <Image
-                             src="/images/imprEcran/LVDP/tableauContacts.png"
-                             alt="image du formulaire pour les contacts qui se portent volontaires"
-                             width={350}
-                             height={350}
-                            /> 
-                        </div>
                     
                 </p>
 
@@ -335,15 +337,7 @@ const tableLVDP = [
                         <MdSecurity 
                             className="inline-block pr-2 text-4xl text-red-500"/>
                             Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
-
-                         <div className="flex justify-center mt-4">
-                           <Image
-                             src="/images/imprEcran/LVDP/formContact.png"
-                             alt="image du formulaire pour les contacts qui se portent volontaires"
-                             width={200}
-                             height={200}
-                            /> 
-                        </div>       
+ 
                 </p>
 
                 <p
@@ -351,15 +345,6 @@ const tableLVDP = [
                         <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe.
-                        
-                        <div className="flex justify-center mt-4">
-                           <Image
-                             src="/images/imprEcran/LVDP/formAdmin.png"
-                             alt="image du formulaire pour les contacts qui se portent volontaires"
-                             width={200}
-                             height={200}
-                            /> 
-                        </div>
                     
                 </p>
 
@@ -368,15 +353,6 @@ const tableLVDP = [
                         <MdSecurity 
                             className="inline-block pr-2 text-4xl text-red-500"/>
                             Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur).
-                        
-                        <div className="flex justify-center mt-4">
-                           <Image
-                             src="/images/imprEcran/LVDP/tableauAdmin.png"
-                             alt="image du formulaire pour les contacts qui se portent volontaires"
-                             width={350}
-                             height={350}
-                            /> 
-                        </div>
                     
                 </p>
 
@@ -387,6 +363,28 @@ const tableLVDP = [
                             Toutes les operations CRUD sont sécurisées par la verification systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
                     
                 </p>
+
+                <Swiper navigation={true} modules={[Navigation]} 
+                        className="mySwiper w-full h-[400px] mx-auto mt-10">
+
+                    {tableLVDP.map((elem) =>
+                        <SwiperSlide 
+                            className="text-center flex justify-center items-center"
+                            key={elem.id}>
+                            <div
+                                className="flex justify-center items-center">
+                                    <Image
+                                        src= {elem.path}
+                                        width={500}
+                                        height={400}
+                                        alt="image de la page d'accueil de developart"
+                            />
+                            </div>
+                        </SwiperSlide> 
+                    )};          
+                    
+                </Swiper>
+
 
                 <p
                     className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
