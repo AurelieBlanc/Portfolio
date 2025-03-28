@@ -202,7 +202,7 @@ export default function CreationPage () {
                     className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic mb-5 xl:text-center xl:w-[50%] xl:mx-auto">
                         <ImEye 
                             className="inline-block text-3xl pr-2 "/>
-                            100% créées par Lili : 
+                            100% créées par Miss White: 
                       
                 </p>
 

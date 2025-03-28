@@ -28,7 +28,8 @@ import Script from "next/script";
 // CODE pour les métadonnées : -------------------------------------------------------------------------------------------------------------------------------//
 
 export const metadata: Metadata = {
-  title : "Portfolio de Miss White - Développeur web full-stack Next.js", 
+  title : "Portfolio de Miss White - Développeur web full-stack Next.js",
+  icons: "/favicon.png",  
   description: "Développeuse web full-stack, spécialisée en Next.js, React.js et TypeScript. Passionnée par le front-end et la création d'expériences web interactives. Basée entre Annecy (France) et Genève (Suisse), je suis disponible pour une collaboration en télétravail partout en France et en Suisse. Découvrez mes projets et contactez-moi pour collaborer !", 
   openGraph: {
     title: "Portfolio de Miss White - Développeur web full-stack Next.js",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
       }
     ], 
     type: "website", 
-  }, 
+  },
   
 }
 
@@ -64,6 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+     
+      
       <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,6 +78,7 @@ export default function RootLayout({
             }),
           }}
         />
+          <link rel="icon" type="image/png" href="/favicon.png?v=2" />
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
           <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lilita+One&display=swap" rel="stylesheet"/>

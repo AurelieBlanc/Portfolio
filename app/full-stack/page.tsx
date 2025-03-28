@@ -9,6 +9,14 @@ import { BsFillCloudFog2Fill } from "react-icons/bs";//icone nuage speed (pour E
 import { ImEye } from "react-icons/im"; // import eye, icone oeil  <ImEye />
 import { MdSecurity } from "react-icons/md"; // icone sécurité <MdSecurity />
 import { FaInstagram } from "react-icons/fa"; // icone instagram <FaInstagram />
+import { FaReact } from "react-icons/fa";  // icone React <FaReact />
+import { IoLogoNodejs } from "react-icons/io5"; // icone Node.js <IoLogoNodejs />
+import { SiPostgresql } from "react-icons/si"; // icone PostGreSQL <SiPostgresql />
+import { SiNextdotjs } from "react-icons/si"; // icone Next <SiNextdotjs />
+import { SiPrisma } from "react-icons/si"; // icone Prisma <SiPrisma />
+
+
+
 import { useEffect, useState } from "react"; // import des hooks react
 import Image from "next/image"; // import du composant Image
 import Link from "next/link"; // import pour mettre en place des liens
@@ -60,9 +68,9 @@ const tableDevArt = [
 
 
 const tableLVDP = [
-    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10", text: "Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique)" }, 
+    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10", text: "Un tableau de consultation accessible à tous, et triable soit par départements (par ordre numérique croissant), soit par villes (par ordre alphabétique)" }, 
     { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10", text: "gestion de l'affichage des coordonnées en conditionnal rendering" }, 
-    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "", text:"Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP puis envoi d'un email via Nodemailer" }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "", text:"Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP puis envoi d'un email à l'admin via Nodemailer" }, 
     { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 300, height: 200, ptMobile: "", text: "Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe." }, 
     { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10", text: "Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur)." }, 
 ]; 
@@ -134,17 +142,17 @@ const tableLVDP = [
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     C'est un planner entièrement réalisé en Drag'N'Drop, avec React. 
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     On génère une tache dans le générateur de tâches ("My Todolist") à gauche de l'écran, puis on la dépose dans n'importe quelle section souhaitée... et si on est des pros de la procrastination, alors ce n'est pas bien grave, on fera glisser la tache pour la déposer dans un autre jour de la semaine.... 
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Bientôt developpé en appli. 
                 </p>
 
@@ -157,21 +165,24 @@ const tableLVDP = [
 
                 <ul
                     className="font-lilita italic ml-8 md:ml-14 mt-5 xl:text-center xl:w-[50%] xl:mx-auto"> 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <FaReact 
+                            className="inline-block pr-2 text-4xl"/>
                             React.js
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <IoLogoNodejs 
+                            className="inline-block pr-2 text-4xl"/>
                            Node.js
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <SiPostgresql
+                            className="inline-block pr-2 text-4xl"/>
                             PostgreSQL
                     </li>
                 </ul>
@@ -204,7 +215,7 @@ const tableLVDP = [
 
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    un CMS pour artiste, pour que celui-ci puisse entièrement moduler sa galerie d'art, avec changements de ses bannières, de son logo, de sa couleur de fond, de ses polices, etc etc ...
+                    Un CMS pour artiste, pour que celui-ci puisse entièrement moduler sa galerie d'art, avec changements de ses bannières, de son logo, de sa couleur de fond, de ses polices, etc etc ...
                 </p>
 
                 <h4
@@ -216,21 +227,24 @@ const tableLVDP = [
 
                 <ul
                     className="font-lilita italic ml-8 md:ml-14 mt-5 xl:text-center xl:w-[50%] xl:mx-auto"> 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li 
+                        className="text-xl">
+                        <FaReact 
+                            className="inline-block pr-2 text-4xl"/>
                             React.js
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <IoLogoNodejs 
+                            className="inline-block pr-2 text-4xl"/>
                            Node.js
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <SiPostgresql
+                            className="inline-block pr-2 text-4xl"/>
                             PostgreSQL
                     </li>
                 </ul>
@@ -324,21 +338,24 @@ const tableLVDP = [
 
                 <ul
                     className="font-lilita italic ml-8 md:ml-14 mt-2  xl:text-center xl:w-[50%] xl:mx-auto"> 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li 
+                        className="text-xl">
+                        <SiNextdotjs 
+                            className="inline-block pr-2 text-4xl"/>
                             Next.js
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <SiPrisma
+                            className="inline-block pr-2 text-4xl"/>
                             Prisma
                     </li>
 
-                    <li>
-                        <ImEye 
-                            className="inline-block pr-1"/>
+                    <li
+                        className="text-xl">
+                        <SiPostgresql
+                            className="inline-block pr-2 text-4xl"/>
                             PostgreSQL
                     </li>
                 </ul>
