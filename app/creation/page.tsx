@@ -105,6 +105,7 @@ export default function CreationPage () {
                                     alt="logo"
                                     width={300}
                                     height={300}
+                                    unoptimized
                                 />
                         </div>
 
