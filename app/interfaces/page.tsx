@@ -213,14 +213,14 @@ const tableDevArt = [
 {/* // Code pour Develop'Art : -----------------------------------------------------------------------------------------------------------------------------// */}
 
                 <h3
-                    className="text-3xl mt-20 font-bangers 2xl:text-center">
+                    className="text-3xl mt-20 font-bangers">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Integration du site Dévelop'Art
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4 2xl:text-center">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4 ">
                     Interface avec effet adaptable et design changeant, quelque soit le format de l'écran:
 
                 </p>

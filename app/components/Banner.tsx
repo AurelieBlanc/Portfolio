@@ -64,7 +64,7 @@ const [ messageShown, setMessageShown ] = useState(false); // pour eviter le cli
                  transition={{ duration: 2,  ease: "easeInOut", }}>
                 <h1 
                     className="font-bangers tracking-wide text-5xl w-[70%] md:text-7xl md:w-[60%]  mx-auto text-center mt-20 mb-2">
-                    Lili White <br />
+                    Miss White <br />
                     Dev web full-stack <br />
                 </h1>
             </motion.div>

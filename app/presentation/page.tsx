@@ -71,7 +71,7 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
-                    Salut moi c'est Aurélie White, et voici mon histoire !
+                    Salut c'est moi, Miss White, alias Aurélie Blanc et voici mon histoire !
                 </p>
 
                 <p
@@ -82,7 +82,7 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-4 text-xl font-lilita italic">
-                    C'est Ainsi que je me suis naturellement tourné dans un premier temps vers l'informatique au sens large, puis j'ai jeté mon dévolu sur le développement Web, pour allier autant le coté logique et intellectuel qui me nourrit, mais aussi le coté créatif qui me ravit. 
+                    C'est Ainsi que je me suis naturellement tournée dans un premier temps vers l'informatique au sens large, puis j'ai jeté mon dévolu sur le développement Web, pour allier autant le coté logique et intellectuel qui me nourrit, mais aussi le coté créatif qui me ravit. 
                 </p>
 
                 <p
