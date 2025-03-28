@@ -150,23 +150,36 @@ export default function ContactPage () {
                 </Link>
             </p>
 
+            <div
+                className="w-[80%] md:w-[60%]  mx-auto">
             <h2
-                className="text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
+                className="text-4xl md:text-6xl w-[90%] mx-auto text-center mt-10 font-bangers">
                    Bienvenue en Contact Zone !!! 
+                   <div
+                        className="inline-block">
+                                   
+                        <Image
+                            src="/images/logos/vectos/contactBulle.svg"
+                            width={70}
+                            height={80}
+                            alt="petite bulle de BD avec écrit full-stack area à l'intérieur"
+                        />
+                    </div> 
             </h2>
+            </div>
             
             <div
                 className="w-[80%] mx-auto">
 
                 <h3
-                    className="text-3xl font-bangers ">
+                    className="text-3xl font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto mt-10">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Interessé(e) pour rentrer en contact ? Voici mes coordonnées :
                 </h3>
 
                 <div
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
                        <ul
                             className="pl-4 md:pl-8 pt-6">
                                 <li
@@ -205,7 +218,7 @@ export default function ContactPage () {
                 </div>
 
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-10">
+                    className="text-3xl mt-10 font-bangers mb-10 xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
 
@@ -213,7 +226,7 @@ export default function ContactPage () {
                 </h3>
 
                 <div
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-10">
+                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-16">
                        <form
                             className="flex flex-col w-[94%] md:w-[60%] mx-auto"
                             onSubmit={submitForm}>

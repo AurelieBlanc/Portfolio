@@ -55,27 +55,40 @@ export default function CreationPage () {
                 </Link>
             </p>
 
+            <div
+                className="w-[80%] md:w-[60%]  mx-auto">
             <h2
-                className="text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                Bienvenue sur la page création de contenus 
+                className="text-4xl md:text-6xl mx-auto text-center mb-10 mt-10 font-bangers">
+                Bienvenue sur la page création de contenus !
+                <div
+                    className="inline-block">
+                
+                    <Image
+                        src="/images/logos/vectos/creationBulle.svg"
+                        width={70}
+                        height={80}
+                        alt="petite bulle de BD avec écrit full-stack area à l'intérieur"
+                                    />
+                </div> 
             </h2>
+            </div>
             
             <div
                 className="w-[80%] mx-auto">
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Sur cette page, je vous partagerais quelques unes de mes créations. 
                 </p>
 
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-5">
+                    className="text-3xl mt-20 font-bangers mb-5 xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les Logos :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-7">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic mb-7 xl:text-center xl:w-[50%] xl:mx-auto">
                      <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             Quelques logos réalisés. 
@@ -179,14 +192,14 @@ export default function CreationPage () {
 
                
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-5">
+                    className="text-3xl mt-20 font-bangers mb-5 xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto ">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les Vignettes :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-5">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic mb-5 xl:text-center xl:w-[50%] xl:mx-auto">
                         <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             100% créées par Lili : 
@@ -194,7 +207,7 @@ export default function CreationPage () {
                 </p>
 
                 <div
-                    className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto pb-10 ">
+                    className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto mt-10 ">
 
                         <div
                             className="w-full md:w-1/4">
@@ -262,14 +275,14 @@ export default function CreationPage () {
                 </div>
 
                 <h3
-                    className="text-3xl mt-10 font-bangers mb-5">
+                    className="text-3xl mt-20 font-bangers mb-5 xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Les images générées par IA pour différents projets :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic mb-5">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic mb-5 xl:text-center xl:w-[50%] xl:mx-auto">
                          <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             WeekyPlanner : 
@@ -277,7 +290,7 @@ export default function CreationPage () {
                 </p>
 
                 <div
-                    className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto pb-10 ">
+                    className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto mt-10">
 
                         <div
                             className="w-full md:w-1/4">
@@ -322,7 +335,7 @@ export default function CreationPage () {
                 </div>
 
                 <p
-                  className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
+                  className="ml-5 md:ml-10 mt-20 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto pb-20">
                     <ImEye 
                         className="inline-block text-3xl pr-2 "/>
                         D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  

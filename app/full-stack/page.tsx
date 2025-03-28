@@ -60,14 +60,12 @@ const tableDevArt = [
 
 
 const tableLVDP = [
-    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10" }, 
-    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10" }, 
-    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "" }, 
-    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 200, height: 200, ptMobile: "" }, 
-    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10" }, 
+    { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10", text: "Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique)" }, 
+    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10", text: "gestion de l'affichage des coordonnées en conditionnal rendering" }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "", text:"Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP puis envoi d'un email via Nodemailer" }, 
+    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 300, height: 200, ptMobile: "", text: "Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe." }, 
+    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10", text: "Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur)." }, 
 ]; 
-
-
 
 
 
@@ -89,15 +87,30 @@ const tableLVDP = [
                 </Link>
             </p>
 
-            <h2
-                className=" text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                Bienvenue en FULL-STACK Zone !!! 
-            </h2>
-            
             <div
-                className="w-[80%] mx-auto">
+                className="w-[80%] md:w-[60%]  mx-auto">
+                <h2
+                    className=" text-4xl md:text-6xl mx-auto text-center mt-10 font-bangers ">
+                    Bienvenue en FULL-STACK Zone !! 
+                    <div
+                    className="inline-block">
+
+                    <Image
+                        src="/images/logos/vectos/fullStackBulle.svg"
+                        width={70}
+                        height={80}
+                        alt="petite bulle de BD avec écrit full-stack area à l'intérieur"
+                    />
+                </div> 
+                </h2>
+               
+            </div>
+            
+
+            <div
+                className="w-[80%] mx-auto mt-20">
                 <h3
-                    className="text-3xl font-bangers ">
+                    className="text-3xl font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Site e-commerce en cours de développement ... A suivre...
@@ -109,41 +122,41 @@ const tableLVDP = [
 
 {/* // Code pour le site WEEKYPLANNER : ---------------------------------------------------------------------------------------------------------------------// */}
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-20 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Site WeekyPlanner : 
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Le planner rigolo au style rétro ! 
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     C'est un planner entièrement réalisé en Drag'N'Drop, avec React. 
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     On génère une tache dans le générateur de tâches ("My Todolist") à gauche de l'écran, puis on la dépose dans n'importe quelle section souhaitée... et si on est des pros de la procrastination, alors ce n'est pas bien grave, on fera glisser la tache pour la déposer dans un autre jour de la semaine.... 
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Bientôt developpé en appli. 
                 </p>
 
                 <h4
-                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers"> 
+                    className="ml-5 md:ml-10 mt-10 text-2xl font-bangers xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
                         Stack Technique : 
                 </h4>
 
                 <ul
-                    className="font-lilita italic ml-8 md:ml-14 mt-2 "> 
+                    className="font-lilita italic ml-8 md:ml-14 mt-5 xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
@@ -164,7 +177,7 @@ const tableLVDP = [
                 </ul>
 
                 <div
-                    className="mt-12 mb-12">
+                    className="mt-10">
                         <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
                             
                             <source 
@@ -183,26 +196,26 @@ const tableLVDP = [
   {/* // Code pour le site DEVELOP'ART :---------------------------------------------------------------------------------------------------------//  */}
                 
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-20 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Site Develop'Art : 
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     un CMS pour artiste, pour que celui-ci puisse entièrement moduler sa galerie d'art, avec changements de ses bannières, de son logo, de sa couleur de fond, de ses polices, etc etc ...
                 </p>
 
                 <h4
-                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers"> 
+                    className="ml-5 md:ml-10 mt-10 text-2xl font-bangers xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
                         Stack Technique : 
                 </h4>
 
                 <ul
-                    className="font-lilita italic ml-8 md:ml-14 mt-2 "> 
+                    className="font-lilita italic ml-8 md:ml-14 mt-5 xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
@@ -281,14 +294,14 @@ const tableLVDP = [
 {/* // Code pour le site LVDP :---------------------------------------------------------------------------------------------------------//  */}
               
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-20 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         "LVDP Rencontres" Site développé en Next.js, avec Prisma et PostgresSQL : 
                 </h3>
 
                 <p
-                    className="mt-10 ml-5 md:ml-11 text-xl font-lilita italic">
+                    className="mt-5 ml-5 md:ml-11 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                         Accès en ligne : 
                         <Link 
                             className="underline ml-2"
@@ -297,20 +310,20 @@ const tableLVDP = [
                         </Link>
                 </p>
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic">
+                    className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
                     Le site peut paraitre simpliste, mais en réalité,  il possède pas mal de fonctionnalités que nous allons détailler, avec les aspects sécurité. 
                 </p>
 
                 <h4
-                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers"> 
+                    className="ml-5 md:ml-10 mt-10 text-2xl font-bangers xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
                         Stack Technique : 
                 </h4>
 
                 <ul
-                    className="font-lilita italic ml-8 md:ml-14 mt-2 "> 
+                    className="font-lilita italic ml-8 md:ml-14 mt-2  xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <li>
                         <ImEye 
                             className="inline-block pr-1"/>
@@ -331,55 +344,15 @@ const tableLVDP = [
                 </ul>
 
                 <h4
-                    className="ml-5 md:ml-10 mt-6 text-2xl font-bangers pb-4"> 
+                    className="ml-5 md:ml-10 text-2xl font-bangers mt-10 xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
                         Fonctionnalités : 
                 </h4>
 
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
-                        <ImEye 
-                            className="inline-block text-2xl pr-2 "/>
-                            Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique).
-                    
-                </p>
-
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
-                        <MdSecurity 
-                            className="inline-block pr-2 text-4xl text-red-500"/>
-                            Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
- 
-                </p>
-
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
-                        <ImEye 
-                            className="inline-block text-3xl pr-2 "/>
-                            Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe.
-                    
-                </p>
-
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-8">
-                        <MdSecurity 
-                            className="inline-block pr-2 text-4xl text-red-500"/>
-                            Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur).
-                    
-                </p>
-
-                <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
-                        <MdSecurity 
-                            className="inline-block pr-2 text-4xl text-red-500"/>
-                            Toutes les operations CRUD sont sécurisées par la verification systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
-                    
-                </p>
-
                 <Swiper navigation={true}
                         modules={[Navigation]} 
-                        className="mySwiper w-full h-full mx-auto mt-10"
+                        className="mySwiper w-full h-full mx-auto mt-5"
                         >
 
                     {tableLVDP.map((elem) =>
@@ -395,14 +368,62 @@ const tableLVDP = [
                                         alt="image de la page d'accueil de developart"
                             />
                             </div>
+                            <div
+                                className="font-bangers text-xl md:w-[30%] mx-auto">
+                                {elem.text}
+                            </div>
                         </SwiperSlide> 
                     )}        
                     
                 </Swiper>
 
+              
+
+                {/* <p
+                    className="ml-5 md:ml-10 mt-6 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        <ImEye 
+                            className="inline-block text-2xl pr-2 "/>
+                            Un tableau de consultation accessible à tous, et triable soit par départements(par ordre numérique croissant), soit par villes (par ordre alphabétique).
+                    
+                </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-lg font-lilita italic pb-10">
+                    className="ml-5 md:ml-10 mt-6 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        <MdSecurity 
+                            className="inline-block pr-2 text-4xl text-red-500"/>
+                            Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP ; si le remplissage du formulaire est correct et validé par YUP, un email automatique sera envoyé à l'admin via Nodemailer pour que celui-ci puisse créer un nouveau contact.
+ 
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-6 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        <ImEye 
+                            className="inline-block text-3xl pr-2 "/>
+                            Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe.
+                    
+                </p>
+
+                <p
+                    className="ml-5 md:ml-10 mt-6 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        <MdSecurity 
+                            className="inline-block pr-2 text-4xl text-red-500"/>
+                            Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur).
+                    
+                </p> */}
+
+                <p
+                    className="ml-5 md:ml-10 mt-6 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        <MdSecurity 
+                            className="inline-block pr-2 text-4xl text-red-500"/>
+                            Toutes les operations CRUD sont sécurisées par la verification systématique d'un cookie httpOnly, et les liens strictement réservés à l'admin sont non accessibles, car protégés par un middleware. 
+                    
+                </p>
+
+                
+
+
+                <p
+                    className="ml-5 md:ml-10 mt-12 text-lg font-lilita italic pb-16 xl:text-center xl:w-[50%] xl:mx-auto">
                          <ImEye 
                             className="inline-block text-3xl pr-2 "/>
                             D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  

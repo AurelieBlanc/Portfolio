@@ -74,11 +74,23 @@ const tableDevArt = [
                 </Link>
             </p>
 
-            <h2
-                className=" text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-5 font-bangers">
-                Bienvenue sur la présentation des sites vitrines !!!
-            </h2>
-
+            <div
+                className="w-[80%] md:w-[60%]  mx-auto">
+                <h2
+                    className=" text-4xl md:text-6xl w-[90%] mx-auto text-center mb-10 mt-10 font-bangers">
+                    Bienvenue sur la présentation des sites vitrines !!!
+                    <div
+                        className="inline-block">
+                    
+                            <Image
+                                src="/images/logos/vectos/interfaceBulle.svg"
+                                width={70}
+                                height={80}
+                                alt="petite bulle de BD avec écrit interface area à l'intérieur"
+                                        />
+                    </div> 
+                </h2>
+            </div>
  
 
 
@@ -88,14 +100,14 @@ const tableDevArt = [
             <div
                 className="w-[80%] mx-auto">
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-16 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Site Vitrine développé pour une naturopathe, "L'Instant Angélique" : 
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     
                     Accès en ligne : 
                     <Link 
@@ -106,12 +118,12 @@ const tableDevArt = [
                 </p>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4">
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic pb-4 xl:text-center xl:w-[50%] xl:mx-auto">
                     Site développé en next.js, adapatable autant sur format mobile que sur format laptop.  
                 </p>
 
                 <div
-                    className="mt-6 mb-12">
+                    className="mt-10">
                         <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
                             
                             <source 
@@ -130,15 +142,15 @@ const tableDevArt = [
 {/* // Code pour O'Pictures : -----------------------------------------------------------------------------------------------------------------------------// */}
 
                 <h3
-                    className="text-3xl mt-10 font-bangers">
+                    className="text-3xl mt-16 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Projet perso de site de photographies O'Pictures :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4">
-                    Interfaces avec différents effets développés en CSS , voir les vidéos de démonstration ci-dessous :
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic pb-4 xl:text-center xl:w-[50%] xl:mx-auto">
+                    Interfaces avec différents effets développés en CSS , voir les 2 vidéos de démonstration ci-dessous :
 
                 </p>
 
@@ -163,7 +175,7 @@ const tableDevArt = [
                                             </video>
 
                                             <p
-                                                className="font-bangers mt-6 text-xl md:text-3xl md:mt-10 lg:text-4xl lg:mt-12 text-center">
+                                                className="font-bangers mt-6 text-xl md:text-2xl md:mt-10 lg:text-3xl lg:mt-12 text-center">
                                                 {elem.effets}
                                             </p>
                                     </div>
@@ -179,14 +191,14 @@ const tableDevArt = [
 {/* // Code pour les Trippers : -----------------------------------------------------------------------------------------------------------------------------// */}
 
                 <h3
-                    className="text-3xl mt-20 font-bangers">
+                    className="text-3xl mt-16 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Projet perso de site de voyage "Les Trippers" :
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic pb-4  xl:text-center xl:w-[50%] xl:mx-auto">
                     Interface avec effet adaptable et design changeant, quelque soit le format de l'écran:
 
                 </p>
@@ -213,14 +225,14 @@ const tableDevArt = [
 {/* // Code pour Develop'Art : -----------------------------------------------------------------------------------------------------------------------------// */}
 
                 <h3
-                    className="text-3xl mt-20 font-bangers">
+                    className="text-3xl mt-20 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
                         Integration du site Dévelop'Art
                 </h3>
 
                 <p
-                    className="ml-5 md:ml-10 mt-2 text-xl font-lilita italic pb-4 ">
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic pb-4 xl:text-center xl:w-[50%] xl:mx-auto">
                     Interface avec effet adaptable et design changeant, quelque soit le format de l'écran:
 
                 </p>
@@ -246,7 +258,7 @@ const tableDevArt = [
                                         
 
                                             <p
-                                                className="font-bangers mt-6 text-xl md:text-3xl md:mt-10 lg:text-4xl lg:mt-12 text-center">
+                                                className="font-bangers mt-6 text-xl md:text-2xl md:mt-10 lg:text-3xl lg:mt-12 text-center">
                                                 {elem.description}
                                             </p>
                                     </div>
@@ -265,7 +277,7 @@ const tableDevArt = [
 
 {/* // Code pour renvoi sur Instagram : -----------------------------------------------------------------------------------------------------------------------------// */}
                 <p
-                    className="ml-5 md:ml-10 mt-20 text-lg font-lilita italic pb-16">
+                    className="ml-5 md:ml-10 mt-20 text-lg font-lilita italic pb-16 xl:text-center xl:w-[50%] xl:mx-auto">
                     <ImEye 
                         className="inline-block text-3xl pr-2 "/>
                             D'autres projets ont été développés mais pas encore déployés... plus de contenus disponibles sur mon compte instagram:  
