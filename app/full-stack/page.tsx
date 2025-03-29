@@ -386,8 +386,11 @@ const tableLVDP = [
                             />
                             </div>
                             <div
-                                className="font-bangers text-xl md:w-[30%] mx-auto">
+                                className="font-bangers text-xl md:w-[30%] mx-auto mt-6">
+                                <p>
                                 {elem.text}
+                                </p>
+                                
                             </div>
                         </SwiperSlide> 
                     )}        
