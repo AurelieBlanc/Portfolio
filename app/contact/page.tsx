@@ -32,7 +32,7 @@ export default function ContactPage () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
 

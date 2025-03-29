@@ -31,7 +31,7 @@ export default function PresentationPage () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
     

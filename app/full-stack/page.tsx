@@ -14,7 +14,6 @@ import { IoLogoNodejs } from "react-icons/io5"; // icone Node.js <IoLogoNodejs /
 import { SiPostgresql } from "react-icons/si"; // icone PostGreSQL <SiPostgresql />
 import { SiNextdotjs } from "react-icons/si"; // icone Next <SiNextdotjs />
 import { SiPrisma } from "react-icons/si"; // icone Prisma <SiPrisma />
-import useThemeStore from "@/store/themeStore"; // import du store global
 
 
 import { useEffect, useState } from "react"; // import des hooks react
@@ -38,7 +37,6 @@ export default function FullStackPage () {
 
 // CODE pour gérer le theme dark ou light de la page en fonction du localStorage :----------------------------------------------------------------------//
 
-    const { theme } = useThemeStore();
 
     const [ themeActu , setThemeActu ] = useState<string>(); 
 
@@ -50,7 +48,7 @@ export default function FullStackPage () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
 

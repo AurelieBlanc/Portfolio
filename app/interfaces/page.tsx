@@ -34,7 +34,7 @@ export default function InterfacePage () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
 

@@ -28,7 +28,7 @@ export default function Footer() {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
     

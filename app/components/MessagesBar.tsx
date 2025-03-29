@@ -26,7 +26,7 @@ export default function MessagesBar () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
     

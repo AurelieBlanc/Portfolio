@@ -32,7 +32,7 @@ export default function CreationPage () {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
 

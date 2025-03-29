@@ -10,10 +10,10 @@ interface ThemeStore { // on type les constantes et les fonctions
 
 const getStoredTheme = (): "light" | "dark" => {  // typage qui signifie que la fonction doit retourner soit "light", soit "dark"
     if (typeof window !== "undefined") { // on s'assure qu'on est coté front et que l'on n'essaie pas d'acceder à localStorage coté serveur, l'objet window est un objet global du navigateur
-        return (localStorage.getItem("theme") as "light" | "dark" || "light");  // on cherche sil ya une propriété "thème" stockée dans le local Storage, si ce n'est pes le cas, localStorage.getItem("theme") retournera "null" ; ici on forcera le type soit par light, soit par dark et si la valeur retournée est null, on forcera la valeur par light ; on aura donc toujours light ou dark comme retour 
+        return (localStorage.getItem("theme") as "light" | "dark" || "dark");  // on cherche sil ya une propriété "thème" stockée dans le local Storage, si ce n'est pes le cas, localStorage.getItem("theme") retournera "null" ; ici on forcera le type soit par light, soit par dark et si la valeur retournée est null, on forcera la valeur par light ; on aura donc toujours light ou dark comme retour 
     }
 
-    return "light"; 
+    return "dark"; 
 }
 
 

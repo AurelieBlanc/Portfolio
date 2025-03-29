@@ -28,7 +28,7 @@ export default function Banner() {
         }
 
         if(!valueLocalStorage) {
-            setThemeActu("light"); 
+            setThemeActu("dark"); 
         }
       }, [])
     
