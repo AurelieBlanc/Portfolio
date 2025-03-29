@@ -78,7 +78,7 @@ export default function RootLayout({
             }),
           }}
         />
-          <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
           <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lilita+One&display=swap" rel="stylesheet"/>
