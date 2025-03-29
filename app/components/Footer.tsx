@@ -26,6 +26,10 @@ export default function Footer() {
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
+        }
       }, [])
     
       useEffect(() => {

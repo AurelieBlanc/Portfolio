@@ -30,6 +30,10 @@ export default function CreationPage () {
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
+        }
       }, [])
 
     const light = "bg-parchemin text-black"

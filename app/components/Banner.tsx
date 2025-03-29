@@ -14,7 +14,7 @@ import { motion, ResolvedValues, AnimatePresence } from "framer-motion"; // impp
 export default function Banner() {
 
 
-// Code pour gerer le theme avec localStorage : ---------------------------------------------------------------//
+// Code pour gerer le theme dark ou light avec localStorage : ---------------------------------------------------------------//
 
     const { theme } = useThemeStore(); 
 
@@ -25,6 +25,10 @@ export default function Banner() {
     
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
+        }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
         }
       }, [])
     
@@ -40,7 +44,9 @@ export default function Banner() {
 
 
 
-// CODE pour gérer les animations --------------------------------------------------------------------------------------------------------------// 
+
+
+// CODE pour gérer les states des animations --------------------------------------------------------------------------------------------------------------// 
 
 const [ message, setMessage ] = useState<string>(""); // pour générer un message à l'arrivée de la soucoupe volante
 const [ messageShown, setMessageShown ] = useState(false); // pour eviter le clignotement des messages de la soucoupe

@@ -30,6 +30,10 @@ export default function ContactPage () {
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
+        }
       }, [])
 
     const light = "bg-parchemin text-black"

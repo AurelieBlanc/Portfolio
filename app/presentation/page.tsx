@@ -29,6 +29,10 @@ export default function PresentationPage () {
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
+        }
       }, [])
     
 

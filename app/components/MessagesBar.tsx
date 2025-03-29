@@ -24,6 +24,10 @@ export default function MessagesBar () {
         if(valueLocalStorage) {
         setThemeActu(valueLocalStorage);  
         }
+
+        if(!valueLocalStorage) {
+            setThemeActu("light"); 
+        }
       }, [])
     
       useEffect(() => {
