@@ -198,7 +198,7 @@ const tableLVDP = [
                         <video className=" w-[80%] md:w-[75%] lg:w-[50%] mx-auto" controls >
                             
                             <source 
-                                src="/videos/WeekyPlanner/weekyDemo.mp4" 
+                                src="/videos/WeekyPlanner/WeekyDemo.mp4" 
                                 type="video/mp4"
                                 className="" />
 
