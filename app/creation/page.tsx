@@ -101,7 +101,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWild2Triangles.png"    
+                                    src="/images/logos/nonVect/beWild2Triangles.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -112,7 +112,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildFondNoir.png"    
+                                    src="/images/logos/nonVect/beWildFondNoir.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -122,7 +122,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildLaurier.png"    
+                                    src="/images/logos/nonVect/beWildLaurier.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -132,7 +132,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/bwClass.png"    
+                                    src="/images/logos/nonVect/bwClass.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -142,7 +142,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildFondBlanc.png"    
+                                    src="/images/logos/nonVect/beWildFondBlanc.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -152,7 +152,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/bwDiff.png"    
+                                    src="/images/logos/nonVect/bwDiff.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -162,7 +162,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildTrianglesFleches.png"    
+                                    src="/images/logos/nonVect/beWildTrianglesFleches.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -172,7 +172,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/bwGreen.png"    
+                                    src="/images/logos/nonVect/bwGreen.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
@@ -182,7 +182,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/logos/png/beWildFondBlancOcre.png"    
+                                    src="/images/logos/nonVect/beWildFondBlancOcre.png"    
                                     alt="logo"
                                     width={300}
                                     height={300}
