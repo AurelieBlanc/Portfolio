@@ -12,6 +12,8 @@ import Image from "next/image"; // import du composant Image
 import { useEffect, useState, ChangeEvent, FormEvent } from "react"; // import des hooks React
 import Link from "next/link"; // import de Link
 import * as Yup from "yup"; // import du schéma de validation de données YUP
+import { toast } from "sonner"; // import de toast pour afficher des messages pop up
+import { div } from "motion/react-client";
 
 //----------------------------------------------------------------------------------------------------------------------//
 
@@ -118,6 +120,7 @@ export default function ContactPage () {
             if (error instanceof Yup.ValidationError) {// on verifie si l'erreur capturée dans le bloc catch est une erreur de validation YUP et si oui, on éxécute le code ci-apres : 
                 const errorMessages = error.inner.map((err) => err.message).join(",\n"); //error.inner est un tableau avec les messages des erreurs, donc on boucle dessus
                 alert(errorMessages);// on affiche les erreurs à l'user grace à la fonction alert
+                return
             }
         }
 
@@ -130,7 +133,27 @@ export default function ContactPage () {
             
             const data = await response.json(); // on recupère la réponse du back dans la constante data
             console.log("reponse du back : ", data.message) // ... et on affiche le message de data
-            alert("Votre email a été envoyé avec succès. Miss White reviendra rapidement vers vous. Bonne journée !!")
+
+            toast(
+                <div className="flex flex-col justify-center items-center w-full max-w-xs rounded-lg bg-black p-3">
+                    <Image
+                        src="/images/popUp.png"
+                        className=""
+                        alt="popUp signifiant que le message formulaire a bien été envoyé"
+                        width={300}
+                        height={200}
+
+                    />
+                </div>
+            ); 
+
+
+            setContactForm ({
+                nom: "",   
+                email: "", 
+                telephone: "", 
+                message: ""
+            })
 
         } catch(error) {
             console.error("erreur lors de l'envoi du formulaire au back : ", error) // si erreur on exécutera ce code 

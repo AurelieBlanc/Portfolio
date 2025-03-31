@@ -8,6 +8,8 @@ import Banner from "./components/Banner"; // import composant Banner
 import MessagesBar from "./components/MessagesBar";  // import de la MessagesBar
 import Footer from "./components/Footer"; // import du footer
 import Script from "next/script";
+import { Toaster } from "sonner"; // import de Toaster pour mettre en place des messages toasts (pop up)
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -87,6 +89,8 @@ export default function RootLayout({
         className="tracking-wider"
         // {`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster position = "top-center"
+                 toastOptions={{ className: "mt-8", duration: 4000}} />
         <Banner />
         <MessagesBar />
        
