@@ -320,7 +320,7 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
-                                    src="/images/imprEcran/WeekyPlanner/design2.jpeg"    
+                                    src="/images/imprEcran/WeekyPlanner/design3.jpeg"    
                                     alt="logo"
                                     width={300}
                                     height={300}
