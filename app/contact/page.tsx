@@ -130,6 +130,7 @@ export default function ContactPage () {
             
             const data = await response.json(); // on recupère la réponse du back dans la constante data
             console.log("reponse du back : ", data.message) // ... et on affiche le message de data
+            alert("Votre email a été envoyé avec succès. Miss White reviendra rapidement vers vous. Bonne journée !!")
 
         } catch(error) {
             console.error("erreur lors de l'envoi du formulaire au back : ", error) // si erreur on exécutera ce code 

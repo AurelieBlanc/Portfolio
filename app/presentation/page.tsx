@@ -90,7 +90,9 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
-                    Salut c'est moi, Miss White, alias Aurélie Blanc et voici mon histoire !
+                    Salut c'est moi, Miss White, alias Aurélie Blanc et voici ma présentation
+                    <PiSmileyDuotone
+                            className="inline-block ml-1 text-2xl" />.
                 </p>
 
                 <p
