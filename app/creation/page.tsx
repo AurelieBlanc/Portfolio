@@ -330,6 +330,15 @@ export default function CreationPage () {
                         <div
                             className="w-full md:w-1/4">
                                 <Image
+                                    src="/images/imprEcran/WeekyPlanner/design4.jpeg"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
                                     src="/images/imprEcran/WeekyPlanner/interfaceWP.png"    
                                     alt="logo"
                                     width={300}
@@ -337,6 +346,136 @@ export default function CreationPage () {
                                 />
                         </div>
 
+                         <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/WeekyPlanner/design5.jpeg"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                         <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/WeekyPlanner/design6.jpeg"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                         <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/WeekyPlanner/design7.jpeg"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                </div>
+
+                 <h3
+                    className="text-3xl mt-20 font-bangers mb-5 xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto ">
+                     <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3"/>
+                        Contenu :
+                </h3>
+
+                <p
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic mb-5 xl:text-center xl:w-[50%] xl:mx-auto">
+                        <ImEye 
+                            className="inline-block text-3xl pr-2 "/>
+                            Instagram Créas : 
+                      
+                </p>
+
+                 <div
+                    className="flex gap-3 flex-wrap items-center justify-center w-[90%] mx-auto mt-10">
+
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/1.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/2.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/3.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/4.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/5.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/4.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/3.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/2.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
+                        <div
+                            className="w-full md:w-1/4">
+                                <Image
+                                    src="/images/imprEcran/instagram/1.png"    
+                                    alt="logo"
+                                    width={300}
+                                    height={300}
+                                />
+                        </div>
                 </div>
 
                 <p
@@ -350,6 +489,8 @@ export default function CreationPage () {
                                     className="ml-4 inline-block" /> 
                         </Link>
                 </p>
+
+                
 
             </div>
 
