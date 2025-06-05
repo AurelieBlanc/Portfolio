@@ -14,6 +14,10 @@ import { IoLogoNodejs } from "react-icons/io5"; // icone Node.js <IoLogoNodejs /
 import { SiPostgresql } from "react-icons/si"; // icone PostGreSQL <SiPostgresql />
 import { SiNextdotjs } from "react-icons/si"; // icone Next <SiNextdotjs />
 import { SiPrisma } from "react-icons/si"; // icone Prisma <SiPrisma />
+import { RiTailwindCssLine } from "react-icons/ri"; // icone Tailwind : <RiTailwindCssLine />
+import { BiLogoTypescript } from "react-icons/bi"; // icone TypeScript : <BiLogoTypescript />
+
+
 
 
 import { useEffect, useState } from "react"; // import des hooks react
@@ -117,16 +121,123 @@ const tableLVDP = [
                 </h2>
                
             </div>
-            
 
+
+
+            
+{/* // Code pour le site Art-Commerce : ---------------------------------------------------------------------- // */}
             <div
                 className="w-[80%] mx-auto mt-20">
                 <h3
                     className="text-3xl font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-                        Site e-commerce en cours de développement ... A suivre...
+                        Site Art-Commerce : 
                 </h3>
+
+                <p
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    Un site e-commerce fictif mais fonctionnel ! 
+                </p>
+                 <p
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    Site réalisé de A à Z , en réalisant toutes les étapes : conception, développement, et mise en ligne, avec une solution de paiement opérationnelle.
+                    
+                </p>
+
+                 <p
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    Toute la sécurité a été réalisé par moi-même sans l'usage d'une bibliothèque tierce, dans le but de  maitriser pleinement cette partie, essentielle aujourd'hui. 
+                    Je peux donc switcher d'un langage de développement à un autre sans trop de problème. 
+                    
+                </p>
+
+                <h4
+                    className="ml-5 md:ml-10 mt-10 text-2xl font-bangers xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
+                    <PiFlyingSaucerDuotone 
+                        className=" inline-block mr-3 text-3xl"/>
+                        Stack Technique : 
+                </h4>
+
+                <ul
+                    className="font-lilita italic ml-8 md:ml-14 mt-5 xl:text-center xl:w-[50%] xl:mx-auto"> 
+                    <li
+                        className="text-xl">
+                        <SiNextdotjs
+                            className="inline-block pr-2 text-4xl"/>
+                            Next.js
+                    </li>
+
+                    <li
+                        className="text-xl">
+                        <BiLogoTypescript
+                            className="inline-block pr-2 text-4xl"/>
+                           TypeScript
+                    </li>
+
+                    <li
+                        className="text-xl">
+                        <SiPostgresql
+                            className="inline-block pr-2 text-4xl"/>
+                            PostgreSQL
+                    </li>
+                    <li
+                        className="text-xl">
+                        <SiPrisma
+                            className="inline-block pr-2 text-4xl"/>
+                            Prisma
+                    </li>
+                    <li
+                        className="text-xl">
+                        <RiTailwindCssLine
+                            className="inline-block pr-2 text-4xl"/>
+                            Tailwind CSS
+                    </li>
+                </ul>
+
+                 <p
+                    className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                   Je vous invite à tester mon site, pour se faire, voici quelques explications qui pourraient servir: 
+                   <Link
+                    className="underline ml-2"
+                    href="https://art-commerce-ten.vercel.app/qui-sommes-nous">
+                        Fonctionnement du site
+                   </Link>
+                    
+                </p>
+
+
+                 <p
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                   Voici le code source de mon site e-commerce : 
+                   <Link
+                    className="underline ml-2"
+                    href="https://github.com/AurelieBlanc/Art-Commerce">
+                        Repo GitHub
+                   </Link>
+                </p>
+                 <p
+                    className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                    Lien vers Art-Commerce: 
+                   <Link
+                    className="underline ml-2"
+                    href="https://art-commerce-ten.vercel.app/">
+                       Art-Commerce
+                   </Link>
+                </p>
+
+                <div    
+                    className="mt-10 flex justify-center">
+                <Image
+                    
+                    alt="impression écran de Art-Commerce"
+                    src="/images/imprEcran/ArtCom/artCom.png"
+                    width={300}
+                    height={300}/>
+                </div>
+
+
+
 
 
 
@@ -324,7 +435,16 @@ const tableLVDP = [
                         <Link 
                             className="underline ml-2"
                             href="https://lvdp-rencontres.vercel.app/">
-                            lvdp-rencontres
+                            Lvdp-rencontres
+                        </Link>
+                </p>
+                <p
+                    className="mt-5 ml-5 md:ml-11 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
+                        Lien vers le code source : 
+                        <Link 
+                            className="underline ml-2"
+                            href="https://github.com/AurelieBlanc/LVDP-Rencontres">
+                            code source lvdp
                         </Link>
                 </p>
                 <p
