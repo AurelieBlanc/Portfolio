@@ -8,6 +8,8 @@ import useThemeStore from "@/store/themeStore"; // on importe le store global
 import Link from "next/link"; // on importe Link pour créer des liens entre nos différentes pages
 import * as motion from "motion/react-client"; // on importe motion de react pour créer des animations
 import { useEffect, useState } from "react"; // import des outils react 
+import { TbBubbleFilled } from "react-icons/tb"; // icone bulle nuage : <TbBubbleFilled />
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -54,6 +56,14 @@ export default function Home() {
     
   <div 
     className={`w-full h-[100%]  ${ themeActu === "light" ? "bg-parchemin" : "bg-black"}`}>
+
+      <h2
+        className={`${themeActu === "light" ? "text-black" : "text-white"} font-bangers text-center pt-6 text-2xl w-[90%] mx-auto`}>
+          Pour Découvrir mon travail, veuillez cliquer sur les vignettes ci-dessous
+          <TbBubbleFilled 
+            className="inline-block ml-2"/>
+
+        </h2>
     
     <div className={`w-[70%] mx-auto  flex justify-center flex-wrap gap-8 pt-8 pb-8 ${ themeActu === "light" ? "bg-parchemin" : "bg-black"}`}>
      
