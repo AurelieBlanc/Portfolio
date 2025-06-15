@@ -114,11 +114,11 @@ const [ messageShown, setMessageShown ] = useState(false); // pour eviter le cli
                         "Flower power",
                         "UFO lover",
                         "NanaNanère", 
-                        "Sur Terre, ça fouette !!", 
+                        "Ici, ça bosse !!", 
                         "Rebelle va !!", 
                         "opé pour la bagarre", 
-                        "Pillier de bar va !", 
-                        "je suis le + bo !"
+                        // "Pillier de bar va !", 
+                        // "je suis le + bo !"
                         ];
                    
                    
