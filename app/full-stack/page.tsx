@@ -16,6 +16,8 @@ import { SiNextdotjs } from "react-icons/si"; // icone Next <SiNextdotjs />
 import { SiPrisma } from "react-icons/si"; // icone Prisma <SiPrisma />
 import { RiTailwindCssLine } from "react-icons/ri"; // icone Tailwind : <RiTailwindCssLine />
 import { BiLogoTypescript } from "react-icons/bi"; // icone TypeScript : <BiLogoTypescript />
+import { SiRedux } from "react-icons/si"; // icone Redux : <SiRedux />
+
 
 
 
@@ -361,6 +363,13 @@ const tableLVDP = [
                         <SiPostgresql
                             className="inline-block pr-2 text-4xl"/>
                             PostgreSQL
+                    </li>
+
+                    <li
+                        className="text-xl">
+                        <SiRedux
+                            className="inline-block pr-2 text-4xl"/>
+                            Redux
                     </li>
                 </ul>
 
