@@ -497,7 +497,7 @@ const tableLVDP = [
                     className="ml-5 md:ml-10 text-2xl font-bangers mt-10 xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
-                        Quelques Fonctionnalités ... :
+                        Quelques Fonctionnalités :
                 </h4>
 
                 <Swiper navigation={true}
