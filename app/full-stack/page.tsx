@@ -150,6 +150,7 @@ const tableLVDP = [
                  <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
                     Toute la sécurité a été réalisé par moi-même sans l'usage d'une bibliothèque tierce, dans le but de  maitriser pleinement cette partie, essentielle dans le développement web aujourd'hui. 
+                    <br />
                     Cette démarche m'a permise de comprendre en profondeur les rouages du système, avec l'objectif de pouvoir appliquer cette logique quelle que soit la technologue utilisée.  
                     
                 </p>
@@ -496,7 +497,7 @@ const tableLVDP = [
                     className="ml-5 md:ml-10 text-2xl font-bangers mt-10 xl:text-3xl xl:text-center xl:w-[50%] xl:mx-auto"> 
                     <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3 text-3xl"/>
-                        Fonctionnalités : 
+                        Quelques Fonctionnalités ... :
                 </h4>
 
                 <Swiper navigation={true}
