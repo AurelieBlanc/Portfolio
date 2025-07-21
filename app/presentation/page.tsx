@@ -90,14 +90,14 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
-                    Salut c'est moi, Miss White, alias Aurélie Blanc et voici ma présentation
+                    Salut c'est moi, Miss White, alias Aurélie Blanc et voici une petite présentation
                     <PiSmileyDuotone
                             className="inline-block ml-1 text-2xl" />.
                 </p>
 
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
-                    C'est à la suite de la découverte tardive de mon syndrome d'Asperger, que j'ai pris un virage à 180 degrés dans ma vie pro et perso. 
+                    C'est à la suite de la découverte tardive de ma neuroatypie, que j'ai pris un virage à 180 degrés dans ma vie pro et perso. 
                       
                 </p>
 
@@ -113,7 +113,7 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    J'ai ensuite continué à me former sur des technos en autodidacte, et je continue toujours; tous les jours je m'entraine, avec beaucoup de plaisir, je crée, aussi bien des interfaces que du code plus poussé en montant des petits projets, et je dois dire que j'adore ça ! Le code a été une révélation. 
+                    J'ai ensuite continué à me former sur des technos en autodidacte, et je continue toujours. Je prends un réel plaisir à m'entraîner régulièrement, à concevoir des interfaces mais aussi à développer des fonctionnalités plus complexes à travers de projets personnels. Le développement s’est révélé être une véritable vocation pour moi — à la fois stimulant, créatif et profondément engageant.
                 </p>
 
 
@@ -194,11 +194,11 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    Coder et créer sont vraiment 2 choses que j'affectionne, et que j'essaie de faire bien, étant de nature appliquée et perfectionniste.
+                    Allier création et développement est ce qui me passionne le plus. J’y mets toute mon exigence et mon attention, guidée par une approche à la fois créative et perfectionniste.
                 </p>
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    J'ai une grande conscience professionnelle et je saurai vous satisfaire par ma motivation et ma puissance de travail, qui est très présente chez les Asperger qui aiment ce qu'ils réalisent.
+                    Ma motivation et ma rigueur sont des atouts que je mets pleinement au service des projets qui me tiennent à cœur. Mon mode de fonctionnement me pousse naturellement à travailler avec intensité et précision. 
                 </p>
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
@@ -208,7 +208,7 @@ export default function PresentationPage () {
 
                 <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic  xl:text-center xl:w-[50%] xl:mx-auto">
-                    Je suis aussi dotée d'une assez grande empathie, ce qui me permet de bien capter la personnalité de mon interlocuteur et de pouvoir créer une interface, un univers à son image, et également de m'adapter et de bien m'intégrer dans une équipe, tout en respectant mes spécificités.
+                    Je suis aussi dotée d'une assez grande empathie, ce qui me permet de bien capter la personnalité de mon interlocuteur et de pouvoir créer une interface, un univers à son image, et également de m'adapter et de bien m'intégrer dans une équipe.
                 </p>
 
                 <p
