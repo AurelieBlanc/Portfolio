@@ -79,10 +79,10 @@ const tableDevArt = [
 
 const tableLVDP = [
     { id: 0, type: "image", path:"/images/imprEcran/LVDP/tableContactsHidden.png", width: 700, height: 300, ptMobile: "pt-10", text: "Un tableau de consultation accessible à tous, et triable soit par départements (par ordre numérique croissant), soit par villes (par ordre alphabétique)" }, 
-    { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10", text: "gestion de l'affichage des coordonnées en conditionnal rendering" }, 
-    { id: 2, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "", text:"Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP puis envoi d'un email à l'admin via Nodemailer" }, 
-    { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 300, height: 200, ptMobile: "", text: "Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe." }, 
-    { id: 4, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10", text: "Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur)." }, 
+    // { id: 1, type: "image", path:"/images/imprEcran/LVDP/tableContactsDisplayed.png", width: 700, height: 300, ptMobile: "pt-10", text: "gestion de l'affichage des coordonnées en conditionnal rendering" }, 
+    { id: 1, type: "image", path:"/images/imprEcran/LVDP/formContact.png", width: 300, height: 200, ptMobile: "", text:"Un formulaire pour se proposer comme contact, protégé par un schéma de validation de données YUP puis envoi d'un email à l'admin via Nodemailer" }, 
+    // { id: 3, type: "image", path:"/images/imprEcran/LVDP/formAdmin.png", width: 300, height: 200, ptMobile: "", text: "Formulaire pour que l'admin puisse se logguer , avec possibilité de changer son mot de passe." }, 
+    { id: 2, type: "image", path:"/images/imprEcran/LVDP/tableContactsAdmin.png", width:650, height:300, ptMobile: "pt-10", text: "Interface réservé à l'admin et sécurisé par la gestion d'un cookie httpOnly (donc défini coté serveur)." }, 
 ]; 
 
 
@@ -149,8 +149,8 @@ const tableLVDP = [
 
                  <p
                     className="ml-5 md:ml-10 mt-5 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    Toute la sécurité a été réalisé par moi-même sans l'usage d'une bibliothèque tierce, dans le but de  maitriser pleinement cette partie, essentielle aujourd'hui. 
-                    Je peux donc switcher d'un langage de développement à un autre sans trop de problème. 
+                    Toute la sécurité a été réalisé par moi-même sans l'usage d'une bibliothèque tierce, dans le but de  maitriser pleinement cette partie, essentielle dans le développement web aujourd'hui. 
+                    Cette démarche m'a permise de comprendre en profondeur les rouages du système, avec l'objectif de pouvoir appliquer cette logique quelle que soit la technologue utilisée.  
                     
                 </p>
 
@@ -199,7 +199,7 @@ const tableLVDP = [
 
                  <p
                     className="ml-5 md:ml-10 mt-10 text-xl font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                   Je vous invite à tester mon site, pour se faire, voici quelques explications qui pourraient servir: 
+                   Je vous invite à tester mon site. Pour se faire, voici quelques explications qui pourraient servir: 
                    <Link
                     className="underline ml-2"
                     href="https://art-commerce-ten.vercel.app/qui-sommes-nous">
@@ -435,7 +435,7 @@ const tableLVDP = [
                     className="text-3xl mt-20 font-bangers xl:text-4xl xl:text-center xl:w-[50%] xl:mx-auto">
                      <PiFlyingSaucerDuotone 
                         className=" inline-block mr-3"/>
-                        "LVDP Rencontres" Site développé en Next.js, avec Prisma et PostgresSQL : 
+                        "LVDP Rencontres": 
                 </h3>
 
                 <p
@@ -458,8 +458,7 @@ const tableLVDP = [
                 </p>
                 <p
                     className="ml-5 md:ml-10 mt-5 text-lg font-lilita italic xl:text-center xl:w-[50%] xl:mx-auto">
-                    Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un tableau où les adhérents volontaires peuvent se proposer en tant que contact. <br />
-                    Le site peut paraitre simpliste, mais en réalité,  il possède pas mal de fonctionnalités que nous allons détailler, avec les aspects sécurité. 
+                    Le but de ce site étant de mettre en lien des personnes partageant un même centre d'intérêt entre elles, pour favoriser des rencontres sur toute la France via un tableau où les adhérents volontaires peuvent se proposer en tant que contact.
                 </p>
 
                 <h4
